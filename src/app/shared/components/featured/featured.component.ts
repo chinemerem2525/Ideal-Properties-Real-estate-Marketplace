@@ -162,6 +162,6 @@ export class FeaturedComponent implements OnInit, OnDestroy {
   startAutoSlide(): void {
     this.intervalId = setInterval(() => {
       this.nextSlide();
-    }, 4000); // Slide every 4 seconds
+    }, 6000); // Slide every 4 seconds
   }
 }

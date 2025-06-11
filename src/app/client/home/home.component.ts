@@ -7,40 +7,7 @@ import { Component, OnInit, OnDestroy, HostListener  } from '@angular/core';
 })
 export class HomeComponent implements OnInit, OnDestroy {
 properties = [
-    {
-      title: 'Exclusive 4 Bedroom Maisonette',
-      image: '../assets/img/product-3/4.jpg',
-      price: '#690,000,000',
-      type: '',
-      badges: ['For Sale', 'Featured', 'Available For Sale'],
-      tags: ['For Sale', 'Featured', 'Available For Sale'],
-      location: 'Ikoyi, Lagos.',
-      beds: 4,
-      baths: 4
-    },
-    {
-      title: 'Outstanding 5-Bedroom Smart Home',
-      image: '../assets/img/product-3/3.jpg',
-      price: '#900,000,000',
-      type: '',
-      badges: ['For Sale', 'Featured'],
-      tags: ['For Sale', 'Featured'],
-      location: 'Chevron',
-      beds: 5,
-      baths: 5
-    },
-    {
-      title: 'Magnificent 4 Bedroom Maisonette',
-      image: '../assets/img/product-3/2.jpg',
-      price: '#250,000,000',
-      type: '',
-      badges: ['For Sale', 'Featured', 'Available For Sale'],
-      tags: ['For Sale', 'Featured', 'Available For Sale'],
-      location: 'Lekki Phase 1, Lagos.',
-      beds: 4,
-      baths: 4
-    },
-    {
+      {
       title: '2 units of 4 Bedroom Terrace',
       image: '../assets/img/product-3/1.jpg',
       price: '$1,200,000',
@@ -81,6 +48,39 @@ properties = [
       badges: ['For Sale'],
       tags: ['For Sale'],
       location: 'Ajah, Lagos.',
+      beds: 4,
+      baths: 4
+    },
+    {
+      title: 'Exclusive 4 Bedroom Maisonette',
+      image: '../assets/img/product-3/4.jpg',
+      price: '#690,000,000',
+      type: '',
+      badges: ['For Sale', 'Featured', 'Available For Sale'],
+      tags: ['For Sale', 'Featured', 'Available For Sale'],
+      location: 'Ikoyi, Lagos.',
+      beds: 4,
+      baths: 4
+    },
+    {
+      title: 'Outstanding 5-Bedroom Smart Home',
+      image: '../assets/img/product-3/3.jpg',
+      price: '#900,000,000',
+      type: '',
+      badges: ['For Sale', 'Featured'],
+      tags: ['For Sale', 'Featured'],
+      location: 'Chevron',
+      beds: 5,
+      baths: 5
+    },
+    {
+      title: 'Magnificent 4 Bedroom Maisonette',
+      image: '../assets/img/product-3/2.jpg',
+      price: '#250,000,000',
+      type: '',
+      badges: ['For Sale', 'Featured', 'Available For Sale'],
+      tags: ['For Sale', 'Featured', 'Available For Sale'],
+      location: 'Lekki Phase 1, Lagos.',
       beds: 4,
       baths: 4
     }
@@ -146,7 +146,9 @@ properties = [
   }
 
   ngOnDestroy(): void {
-    clearInterval(this.intervalId);
+      if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
   }
 
   @HostListener('window:resize')
@@ -156,13 +158,11 @@ properties = [
   }
 
   calculateItemsPerSlide() {
-    const width = window.innerWidth;
+     const width = window.innerWidth;
     if (width < 600) {
       this.itemsPerSlide = 1;
-    } else if (width < 768) {
-      this.itemsPerSlide = 2;
     } else if (width < 1024) {
-      this.itemsPerSlide = 3;
+      this.itemsPerSlide = 2;
     } else {
       this.itemsPerSlide = 4;
     }
@@ -173,14 +173,11 @@ properties = [
     }
   }
 
-  updateVisibleProperties() {
-    if (this.startIndex + this.itemsPerSlide > this.properties.length) {
-      this.visibleProperties = [
-        ...this.properties.slice(this.startIndex),
-        ...this.properties.slice(0, (this.startIndex + this.itemsPerSlide) % this.properties.length)
-      ];
-    } else {
-      this.visibleProperties = this.properties.slice(this.startIndex, this.startIndex + this.itemsPerSlide);
+  updateVisibleProperties(): void {
+    this.visibleProperties = [];
+    for (let i = 0; i < this.itemsPerSlide; i++) {
+      const index = (this.startIndex + i) % this.properties.length;
+      this.visibleProperties.push(this.properties[index]);
     }
   }
 
@@ -194,9 +191,9 @@ properties = [
     this.updateVisibleProperties();
   }
 
-  startAutoSlide() {
+   startAutoSlide(): void {
     this.intervalId = setInterval(() => {
       this.nextSlide();
-    }, 5000); // slower interval (5s), you can change to 8000 if you want
+    }, 6000); // Slide every 4 seconds
   }
 }
