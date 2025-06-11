@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FeaturedComponent } from './components/featured/featured.component';
+import { TopListingsComponent } from './components/top-listings/top-listings.component';
+import { BrowsePropertiesCtaComponent } from './components/browse-properties-cta/browse-properties-cta.component';
+import { ApartmentsComponent } from './components/apartments/apartments.component';
 
 
 
@@ -10,7 +13,10 @@ import { FeaturedComponent } from './components/featured/featured.component';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    FeaturedComponent
+    FeaturedComponent,
+    TopListingsComponent,
+    BrowsePropertiesCtaComponent,
+    ApartmentsComponent
   ],
   imports: [
     CommonModule
@@ -18,7 +24,11 @@ import { FeaturedComponent } from './components/featured/featured.component';
     exports: [
     HeaderComponent,
     FooterComponent,
-    FeaturedComponent
+    FeaturedComponent,
+    TopListingsComponent,
+    BrowsePropertiesCtaComponent,
+    ApartmentsComponent
+
   ]
 })
 export class SharedModule { }

@@ -1,0 +1,27 @@
+<section class="neighbourhood-section">
+  <!-- <h2>Short Stay Apartments</h2> -->
+  <!-- <p class="subheading">Choose where you live, find your place there</p> -->
+
+  <div class="property-grid">
+    <div class="property-card" *ngFor="let property of properties">
+      <div class="image-container">
+        <img [src]="property.image" alt="{{ property.title }}" />
+        <span class="badge">Short Stays</span>
+        <div class="price">{{ property.price }}</div>
+        <div class="icons">
+          <button><i class="fas fa-heart"></i></button>
+          <button><i class="fas fa-share-alt"></i></button>
+        </div>
+      </div>
+      <div class="property-info">
+        <span class="type">{{ property.type }}</span>
+        <h3>{{ property.title }}</h3>
+        <p class="location"><i class="fas fa-map-marker-alt"></i> {{ property.location }}</p>
+        <div class="details">
+          <span>Beds: {{ property.beds }}</span>
+          <span>Baths: {{ property.baths }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
