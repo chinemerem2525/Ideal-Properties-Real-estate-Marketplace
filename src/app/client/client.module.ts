@@ -11,12 +11,12 @@ import { NewProjectComponent } from './new-project/new-project.component';
 import { PropertiesComponent } from './properties/properties.component';
 import { ServicesComponent } from './services/services.component';
 import { ShortStayComponent } from './short-stay/short-stay.component';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
 
-  
+
     HomeComponent,
         AboutComponent,
         ContactUsComponent,
@@ -28,7 +28,8 @@ import { ShortStayComponent } from './short-stay/short-stay.component';
   imports: [
     CommonModule,
     ClientRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class ClientModule { }

@@ -6,7 +6,23 @@ import { Component, OnInit, OnDestroy, HostListener  } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
+tabs: string[] = ['BUY', 'RENT', 'SHORT LET'];
+  activeTab = 'BUY';
 
+  location: string[] = [
+    'Abuja', 'Agungi', 'Ajah', 'Apo', 'Asokoro', 'Banana Island'
+  ];
+
+  propertyTypes: string[] = [
+    'Apartment', 'Duplex', 'Terrace', 'Penthouse', 'Land', 'Maisonette'
+  ];
+
+  selectedLocation: string = '';
+  selectedType: string = '';
+
+  setActiveTab(tab: string) {
+    this.activeTab = tab;
+  }
 
    locations = [
     {
@@ -57,11 +73,15 @@ export class HomeComponent implements OnInit, OnDestroy {
   ];
 
 
+
+
   ngOnInit(): void {
 
   }
 
   ngOnDestroy(): void {
   }
+
+
 
 }

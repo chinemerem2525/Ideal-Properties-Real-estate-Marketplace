@@ -12,4 +12,23 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+tabs: string[] = ['BUY', 'RENT', 'SHORT LET'];
+  activeTab = 'BUY';
+
+  location: string[] = [
+    'Abuja', 'Agungi', 'Ajah', 'Apo', 'Asokoro', 'Banana Island'
+  ];
+
+  propertyTypes: string[] = [
+    'Apartment', 'Duplex', 'Terrace', 'Penthouse', 'Land', 'Maisonette'
+  ];
+
+  selectedLocation: string = '';
+  selectedType: string = '';
+
+  setActiveTab(tab: string) {
+    this.activeTab = tab;
+  }
+
+
 }

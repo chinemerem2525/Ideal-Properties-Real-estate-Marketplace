@@ -6,7 +6,7 @@ import { FeaturedComponent } from './components/featured/featured.component';
 import { TopListingsComponent } from './components/top-listings/top-listings.component';
 import { BrowsePropertiesCtaComponent } from './components/browse-properties-cta/browse-properties-cta.component';
 import { ApartmentsComponent } from './components/apartments/apartments.component';
-
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +19,8 @@ import { ApartmentsComponent } from './components/apartments/apartments.componen
     ApartmentsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
     exports: [
     HeaderComponent,
