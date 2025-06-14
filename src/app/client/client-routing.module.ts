@@ -8,6 +8,7 @@ import { ServicesComponent } from './services/services.component';
 import { ShortStayComponent } from './short-stay/short-stay.component';
 import { NewProjectComponent } from './new-project/new-project.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { PropertyDetailComponent } from './property-detail/property-detail.component';
 
 
 const routes: Routes = [
@@ -42,6 +43,10 @@ const routes: Routes = [
       {
         path: 'contact-us',
         component: ContactUsComponent
+      },
+      {
+        path: 'property-detail',
+        component: PropertyDetailComponent
       }
     ]
   }

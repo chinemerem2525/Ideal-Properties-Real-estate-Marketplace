@@ -83,11 +83,12 @@
 
 .luxury-listings {
   text-align: center;
-  padding: 2rem;
+
 
   .title {
     font-size: 2rem;
     font-weight: bold;
+    margin-top: 4rem;
   }
 
   .subtitle {
@@ -229,3 +230,16 @@
         // width: 45px;
         // height: 45px;
         // right: 15px;
+
+
+        .top-button {
+  background-color: #002f45;
+  color: #fff;
+  font-size: 1rem;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 6px;
+  margin: 0px auto;
+  cursor: pointer;
+  display: inline-block;
+}

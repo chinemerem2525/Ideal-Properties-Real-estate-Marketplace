@@ -12,6 +12,7 @@ import { PropertiesComponent } from './properties/properties.component';
 import { ServicesComponent } from './services/services.component';
 import { ShortStayComponent } from './short-stay/short-stay.component';
 import { FormsModule } from '@angular/forms';
+import { PropertyDetailComponent } from './property-detail/property-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
         NewProjectComponent,
         PropertiesComponent,
         ServicesComponent,
-        ShortStayComponent
+        ShortStayComponent,
+        PropertyDetailComponent
   ],
   imports: [
     CommonModule,
