@@ -72,3 +72,61 @@
   background-color: #004ca3;
   color: white;
 }
+
+
+// Tabs
+.tab-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.tab-btn {
+  padding: 8px 16px;
+  border: 1px solid #004ca3;
+  background-color: white;
+  color: #004ca3;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-btn.active {
+  background-color: #004ca3;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.normal-tabs {
+  display: none;
+}
+
+
+/* Hide tabs by default on larger screens */
+.responsive-tabs {
+  display: none;
+}
+
+/* Show tabs only on screens smaller than 990px */
+@media (max-width: 992.5px) {
+  .responsive-tabs {
+    display: block;
+  }
+  .normal-tabs {
+  display: none;
+  }
+}
+
+@media (min-width: 993px) {
+  .normal-tabs {
+  display: block;
+}
+}
+
