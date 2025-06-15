@@ -7,6 +7,7 @@ import { TopListingsComponent } from './components/top-listings/top-listings.com
 import { BrowsePropertiesCtaComponent } from './components/browse-properties-cta/browse-properties-cta.component';
 import { ApartmentsComponent } from './components/apartments/apartments.component';
 import { FormsModule } from '@angular/forms';
+import { RelatedListingComponent } from './components/related-listing/related-listing.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     FeaturedComponent,
     TopListingsComponent,
     BrowsePropertiesCtaComponent,
-    ApartmentsComponent
+    ApartmentsComponent,
+    RelatedListingComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ import { FormsModule } from '@angular/forms';
     FeaturedComponent,
     TopListingsComponent,
     BrowsePropertiesCtaComponent,
-    ApartmentsComponent
+    ApartmentsComponent,
+    RelatedListingComponent
 
   ]
 })

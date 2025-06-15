@@ -1,0 +1,245 @@
+.property-item {
+  flex: 0 0 auto;
+  width: 100%; // Adjust based on itemsPerSlide in HTML layout
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  // padding: 20px;
+  transition: transform 1s ease-in-out; // Smooth sliding transition
+
+  .carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    button {
+      background: white;
+      color: #969595;
+      border: none;
+      // padding: 8px 16px;
+      cursor: pointer;
+      border-radius: 50px;
+      // border: 1px solid #000;
+
+      margin-bottom: -10rem;
+
+      &:hover {
+        background: #000;
+      }
+    }
+  }
+
+  .carousel-wrapper {
+    overflow: hidden;
+     width: 100%;
+   position: relative;
+  }
+
+  .property-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    transition: all 0.5s ease;
+  }
+
+  .property-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 0px;
+    // box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+
+    img {
+      width: 100%;
+      border-radius: 6px;
+      height: 5rem;
+    }
+
+    .tags {
+      margin: 5px 0;
+      span {
+        background-color: #f9f9f9;
+        padding: 2px 6px;
+        border-radius: 4px;
+        margin-right: 4px;
+        font-size: 12px;
+      }
+    }
+
+    h3 {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+
+    p {
+      font-size: 14px;
+      color: #666;
+    }
+  }
+}
+
+.luxury-listings {
+  text-align: center;
+
+
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 4rem;
+  }
+
+  .subtitle {
+    color: #777;
+    margin-bottom: 2rem;
+  }
+
+  .listings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .property-card {
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+
+    .image-wrapper {
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 14rem;
+        object-fit: cover;
+         background-color: rgba(0, 0, 0, 0.6); /* Black with 60% opacity */
+      }
+
+      .badges {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+
+        .badge {
+          background: #3f4c6b;
+          color: #fff;
+          font-size: 0.7rem;
+          padding: 2px 6px;
+          border-radius: 4px;
+        }
+
+      }
+
+      .price {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: white;
+        // background: rgba(0,0,0,0.6);
+        padding: 0.2rem 0.5rem;
+        border-radius: 4px;
+      }
+
+      .icons {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        display: flex;
+        gap: 5px;
+
+        .icon {
+          background: rgba(207, 207, 207, 0.8);
+          border: none;
+          border-radius: 5px;
+          padding: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .property-details {
+      padding: 1rem 0rem;
+      text-align: left;
+
+
+      .type {
+        font-weight: bold;
+        font-size: 0.85rem;
+      }
+
+      .red-text {
+        color: red;
+      }
+
+      h3 {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+      }
+
+      .location {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+// Buttons
+ .left {
+  height: 2rem;
+  width: 2rem;
+  float: left;
+  margin-top: 90px;
+  justify-content: left;
+  // position: absolute;
+  border-radius: 50px;
+  z-index: 10;
+ }
+
+  .right {
+  height: 2rem;
+  width: 2rem;
+  float: right;
+  margin-top: 90px;
+  justify-content: right;
+  // position: absolute;
+  border-radius: 50px;
+  z-index: 10;
+ }
+        //  top: 46%;
+        // transform: translateY(-50%);
+        // z-index: 9;
+        // width: 45px;
+        // height: 45px;
+        // right: 15px;
+
+
+        .top-button {
+  background-color: #002f45;
+  color: #fff;
+  font-size: 1rem;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 6px;
+  margin: 0px auto;
+  cursor: pointer;
+  display: inline-block;
+}

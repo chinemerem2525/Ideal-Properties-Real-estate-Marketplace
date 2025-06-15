@@ -3,6 +3,7 @@ import { BrowsePropertiesCtaComponent } from "./browse-properties-cta/browse-pro
 import { FeaturedComponent } from "./featured/featured.component";
 import { FooterComponent } from "./footer/footer.component";
 import { HeaderComponent } from "./header/header.component";
+import { RelatedListingComponent } from "./related-listing/related-listing.component";
 import { TopListingsComponent } from "./top-listings/top-listings.component";
 
 
@@ -12,7 +13,8 @@ export {
   FeaturedComponent,
   TopListingsComponent,
   BrowsePropertiesCtaComponent,
-  ApartmentsComponent
+  ApartmentsComponent,
+  RelatedListingComponent
 
 }
 

@@ -1,10 +1,7 @@
-<!-- luxury-listings-->
+<!-- Related-listings-->
 
   <section class="luxury-listings carousel-container">
      <div class="container">
-    <h2 class="title">Featured Listings in Lagos</h2>
-    <p class="subtitle">Some of the finest luxury listings in the market, handpicked just for you</p>
-
         <div class="carousel-controls slick-slide-arrow-1 slick-slide-dots-1">
           <button (click)="prevSlide()" class="left">←</button>
           <button (click)="nextSlide()" class="right">→</button>
@@ -27,20 +24,19 @@
             </div>
             <div class="property-details">
               <span class="type" [class.red-text]="property.type === 'Terraced'">{{ property.type }}</span>
-              <!-- <h3>{{ property.title }}</h3> -->
-               <a href="property-detail">
+              <a href="property-detail">
                 <h3>{{ property.title }}</h3>
               </a>
+              <!-- <h3>{{ property.title }}</h3> -->
               <p class="location"><i class="fa fa-map-marker"></i> {{ property.location }}</p>
               <p>Beds: {{ property.beds }} &nbsp; Baths: {{ property.baths }}</p>
             </div>
           </div>
         </div>
-     <button class="top-button">Browse Properties For Rent</button>
     </div>
 
   </section>
 
-<!-- luxury-listings-->
+<!-- Related-listings-->
 
 
