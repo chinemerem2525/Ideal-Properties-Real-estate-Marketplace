@@ -8,6 +8,7 @@ import { BrowsePropertiesCtaComponent } from './components/browse-properties-cta
 import { ApartmentsComponent } from './components/apartments/apartments.component';
 import { FormsModule } from '@angular/forms';
 import { RelatedListingComponent } from './components/related-listing/related-listing.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { RelatedListingComponent } from './components/related-listing/related-li
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
     exports: [
     HeaderComponent,

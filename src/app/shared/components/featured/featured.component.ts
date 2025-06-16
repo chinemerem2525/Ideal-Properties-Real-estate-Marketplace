@@ -21,6 +21,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
 export class FeaturedComponent implements OnInit, OnDestroy {
   properties = [
     {
+      id: 'IP56729',
       title: 'Exclusive 4 Bedroom Maisonette',
       image: '../assets/img/product-3/4.jpg',
       price: '#690,000,000',
@@ -32,6 +33,7 @@ export class FeaturedComponent implements OnInit, OnDestroy {
       baths: 4
     },
     {
+      id: 'IP56729',
       title: 'Outstanding 5-Bedroom Smart Home',
       image: '../assets/img/product-3/3.jpg',
       price: '#900,000,000',
@@ -43,6 +45,7 @@ export class FeaturedComponent implements OnInit, OnDestroy {
       baths: 5
     },
     {
+      id: 'IP56729',
       title: 'Magnificent 4 Bedroom Maisonette',
       image: '../assets/img/product-3/2.jpg',
       price: '#250,000,000',
@@ -54,6 +57,7 @@ export class FeaturedComponent implements OnInit, OnDestroy {
       baths: 4
     },
     {
+      id: 'IP56729',
       title: '2 units of 4 Bedroom Terrace',
       image: '../assets/img/product-3/1.jpg',
       price: '$1,200,000',
@@ -65,6 +69,7 @@ export class FeaturedComponent implements OnInit, OnDestroy {
       baths: 4
     },
     {
+      id: 'IP56729',
       title: 'Luxury Penthouse with Lagoon View',
       image: '../assets/img/product-3/5.jpg',
       price: '#760,000,000',
@@ -76,6 +81,7 @@ export class FeaturedComponent implements OnInit, OnDestroy {
       baths: 6
     },
     {
+      id: 'IP56729',
       title: 'Modern 3 Bedroom Apartment',
       image: '../assets/img/product-3/6.jpg',
       price: '$1,000,000',
@@ -87,6 +93,7 @@ export class FeaturedComponent implements OnInit, OnDestroy {
       baths: 3
     },
     {
+      id: 'IP56729',
       title: 'Affordable Duplex in Ajah',
       image: '../assets/img/product-3/7.jpg',
       price: '#920,000,000',

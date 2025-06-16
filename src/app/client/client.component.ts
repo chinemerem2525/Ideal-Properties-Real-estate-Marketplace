@@ -10,12 +10,16 @@ export class ClientComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+      // Load script manually if needed
+  const script = document.createElement('script');
+  script.src = '../../assets/js/main.js';
+  document.body.appendChild(script);
   }
 
     ngAfterViewInit(): void {
   // Load script manually if needed
   const script = document.createElement('script');
-  script.src = 'assets/js/main.js';
+  script.src = '../../assets/js/main.js';
   document.body.appendChild(script);
 }
 
