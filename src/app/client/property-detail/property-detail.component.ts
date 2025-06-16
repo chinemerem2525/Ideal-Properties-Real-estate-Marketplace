@@ -7,6 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PropertyDetailComponent implements OnInit {
 
+  propertyDetail = [
+     {
+      propertyId: 'IP28917',
+      title: 'Exclusive 4 Bedroom Maisonette',
+      propertyStatus: 'For sale',
+      image: '../assets/img/product-3/4.jpg',
+      price: '#690,000,000',
+      type: '',
+      badges: ['For Sale', 'Featured', 'Available For Sale'],
+      tags: ['For Sale', 'Featured', 'Available For Sale'],
+      location: 'Ikoyi, Lagos.',
+      rooms: 7,
+      beds: 4,
+      baths: 4,
+      realtorName: 'Tom John',
+
+     }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
