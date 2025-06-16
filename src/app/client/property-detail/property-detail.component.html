@@ -76,7 +76,7 @@
                   <div class="col-lg-8 col-md-12">
                       <div class="ltn__shop-details-inner ltn__page-details-inner mb-60">
                         <div *ngIf="property">
-                        <h4 class="title-2">Description</h4>
+                        <h4 class="title-2" *ngIf="property">{{ property.title }} in {{property.location}}</h4>
                         <p *ngFor="let desc of property.descriptions">{{ desc }}</p>
 
                         <h4 class="title-2">Property Detail</h4>
@@ -255,7 +255,7 @@
                 <div class="col-lg-8 col-md-12 normal-tabs">
                     <div class="ltn__shop-details-inner ltn__page-details-inner mb-60">
                       <div *ngIf="property">
-                        <h4 class="title-2">Description</h4>
+                        <h4 class="title-2" *ngIf="property">{{ property.title }} in {{property.location}}</h4>
                         <p *ngFor="let desc of property.descriptions">{{ desc }}</p>
 
                         <h4 class="title-2">Property Detail</h4>
