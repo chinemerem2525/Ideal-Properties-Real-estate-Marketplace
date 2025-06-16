@@ -1,19 +1,20 @@
 <!-- Body main wrapper start -->
 <div class="body-wrapper" id="top">
 
-      <div class="property-header container">
-        <div class="property-info">
-          <h2>
-            Luxury 3 Bedroom Maisonette with BQ
-            <span class="badge">Featured</span>
-          </h2>
-          <p><i class="flaticon-pin"></i>Ikoyi, Lagos.</p>
-        </div>
-        <div class="property-actions">
-          <button><i class="fas fa-share-alt"></i></button>
-          <span class="price">₦900,000,000</span>
-        </div>
+    <div class="property-header container" *ngIf="property">
+      <div class="property-info">
+        <h2>
+          {{ property.title }}
+          <span *ngIf="property.isFeatured" class="badge">Featured</span>
+        </h2>
+        <p><i class="flaticon-pin"></i>{{ property.location }}</p>
       </div>
+      <div class="property-actions">
+        <button><i class="fas fa-share-alt"></i></button>
+        <span class="price">{{ property.price }}</span>
+      </div>
+    </div>
+
 
  <!-- IMAGE SLIDER AREA START -->
 <div class="ltn__img-slider-area mb-90" *ngIf="property?.images?.length">

@@ -3,6 +3,9 @@ import { ActivatedRoute } from '@angular/router';
 
 interface Property {
   id: string;
+  title: string;
+  location: string;
+  isFeatured: boolean;
   images: string[];
   descriptions: string[];
   price: string;
@@ -55,6 +58,9 @@ export class PropertyDetailComponent implements OnInit {
   allProperties: Property[] = [
     {
       id: 'IP56729',
+      title: 'Luxury 3 Bedroom Maisonette with BQ',
+      location: 'Ikoyi, Lagos',
+      isFeatured: false,
       images: [
         '../../../assets/img/img-slide/31.jpg',
         '../../../assets/img/img-slide/32.jpg',
@@ -66,7 +72,7 @@ export class PropertyDetailComponent implements OnInit {
         'Experience ultimate comfort and breathtaking waterfront views in this elegant 4-bedroom duplex, available for daily rent. Perfect for vacations, business stays, or private getaways, this home features spacious en-suite bedrooms, a fully equipped kitchen, and stylish living areas designed for relaxation. Enjoy the serene ambiance and premium amenities while staying in a secure and prime location. Book now for an unforgettable waterfront living experience!',
         'To the left is the modern kitchen with central island, leading through to the unique breakfast family room which feature glass walls and doors out onto the garden and access to the separate utility room.'
       ],
-      price: '#800,000,000',
+      price: '₦800,000,000',
       rooms: 7,
       baths: 2,
       area: '120 sqft',
@@ -112,24 +118,24 @@ export class PropertyDetailComponent implements OnInit {
           name: 'Luxury House In Greenville',
           url: 'product-details.html',
           rating: 5,
-          price: '#300,000,000',
-          oldPrice: '#350,000,000'
+          price: '₦300,000,000',
+          oldPrice: '₦350,000,000'
         },
         {
           image: '../../../assets/img/product/2.png',
           name: 'Apartment with Subunits',
           url: 'product-details.html',
           rating: 5,
-          price: '#140,000',
-          oldPrice: '#155,000'
+          price: '₦140,000',
+          oldPrice: '₦155,000'
         },
         {
           image: '../../../assets/img/product/3.png',
           name: '3 Rooms Manhattan',
           url: 'product-details.html',
           rating: 3.5,
-          price: '#800,000,000',
-          oldPrice: '#890,000,000'
+          price: '₦800,000,000',
+          oldPrice: '₦890,000,000'
         }
       ],
       contact: {

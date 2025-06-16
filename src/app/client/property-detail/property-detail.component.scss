@@ -11,7 +11,7 @@
 
 .title {
   font-weight: bold;
-  color: #003366;
+  color: #002f45;
   margin-bottom: 0.8rem;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .icon.phone {
-  background-color: #004ca3;
+  background-color: #002f45;
   background-image: url('data:image/svg+xml,<svg fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79a15.09 15.09 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.36 11.36 0 003.55.57 1 1 0 011 1v3.6a1 1 0 01-.91 1A17.91 17.91 0 013 5a1 1 0 011-1h3.6a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.21 1.11l-2.2 2.2z"/></svg>');
   background-repeat: no-repeat;
   background-position: center;
@@ -59,8 +59,8 @@
 
 .btn-outline {
   background-color: white;
-  color: #004ca3;
-  border: 1px solid #004ca3;
+  color: #002f45;
+  border: 1px solid #002f45;
   border-radius: 4px;
   padding: 6px 12px;
   cursor: pointer;
@@ -69,7 +69,7 @@
 }
 
 .btn-outline:hover {
-  background-color: #004ca3;
+  background-color: #003f5c;
   color: white;
 }
 
@@ -83,16 +83,16 @@
 
 .tab-btn {
   padding: 8px 16px;
-  border: 1px solid #004ca3;
+  border: 1px solid #002f45;
   background-color: white;
-  color: #004ca3;
+  color: #002f45;
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .tab-btn.active {
-  background-color: #004ca3;
+  background-color: #002f45;
   color: white;
 }
 
