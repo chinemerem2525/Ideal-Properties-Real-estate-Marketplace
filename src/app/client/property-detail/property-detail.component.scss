@@ -122,11 +122,71 @@
   .normal-tabs {
   display: none;
   }
+  .property-header {
+    display: flex;
+  }
 }
 
 @media (min-width: 993px) {
   .normal-tabs {
   display: block;
 }
+}
+
+// Property heading
+
+.property-header {
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.property-info h2 {
+  font-size: 1.8rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.property-info p {
+  margin: 0.25rem 0 0;
+  color: #555;
+}
+
+.badge {
+  background-color: #8BC34A;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+}
+
+.property-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.property-actions button {
+  background-color: #006d77;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.property-actions button i {
+  pointer-events: none;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 1rem;
 }
 
