@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 interface Property {
   id: string;
+  images: string[];
   descriptions: string[];
   price: string;
   rooms: number;
@@ -36,6 +37,10 @@ interface Property {
     price: string;
     oldPrice?: string;
   }[];
+   contact: {
+    phone: string;
+    whatsapp: string;
+  };
 }
 
 @Component({
@@ -50,6 +55,13 @@ export class PropertyDetailComponent implements OnInit {
   allProperties: Property[] = [
     {
       id: 'IP56729',
+      images: [
+        '../../../assets/img/img-slide/31.jpg',
+        '../../../assets/img/img-slide/32.jpg',
+        '../../../assets/img/img-slide/33.jpg',
+        '../../../assets/img/img-slide/34.jpg',
+        '../../../assets/img/img-slide/35.jpg'
+      ],
       descriptions: [
         'Experience ultimate comfort and breathtaking waterfront views in this elegant 4-bedroom duplex, available for daily rent. Perfect for vacations, business stays, or private getaways, this home features spacious en-suite bedrooms, a fully equipped kitchen, and stylish living areas designed for relaxation. Enjoy the serene ambiance and premium amenities while staying in a secure and prime location. Book now for an unforgettable waterfront living experience!',
         'To the left is the modern kitchen with central island, leading through to the unique breakfast family room which feature glass walls and doors out onto the garden and access to the separate utility room.'
@@ -78,48 +90,52 @@ export class PropertyDetailComponent implements OnInit {
       ],
       video: {
       url: 'https://www.youtube.com/embed/eWUxqVFBq74?autoplay=1&showinfo=0',
-      thumbnail: '../../../assets/img/others/5.jpg' // or wherever your image is located
+      thumbnail: '../../../assets/img/others/5.jpg'
       },
-      author: {
-    name: 'Rosalina D. Willaimson',
-    title: 'Realtor',
-    image: '../../../assets/img/team/4.jpg',
-    rating: 3.5,
-    reviewCount: 1,
-    bio: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis distinctio, odio, eligendi suscipit reprehenderit atque.',
-    social: {
-      facebook: '#',
-      twitter: '#',
-      linkedin: '#',
-      youtube: '#'
-    }
-  },
-  topRatedProducts: [
-    {
-      image: '../../../assets/img/product/1.png',
-      name: 'Luxury House In Greenville',
-      url: 'product-details.html',
-      rating: 5,
-      price: '$30,000.00',
-      oldPrice: '$35,000.00'
-    },
-    {
-      image: '../../../assets/img/product/2.png',
-      name: 'Apartment with Subunits',
-      url: 'product-details.html',
-      rating: 5,
-      price: '$30,000.00',
-      oldPrice: '$35,000.00'
-    },
-    {
-      image: '../../../assets/img/product/3.png',
-      name: '3 Rooms Manhattan',
-      url: 'product-details.html',
-      rating: 3.5,
-      price: '$30,000.00',
-      oldPrice: '$35,000.00'
-    }
-  ]
+     author: {
+        name: 'Vanessa E. Hartwell',
+        title: 'Senior Realtor',
+        image: '../../../assets/img/team/2.jpg',
+        rating: 4.7,
+        reviewCount: 28,
+        bio: "I'm an experienced realtor known for her client-first approach and strong negotiation skills in luxury and commercial real estate.",
+        social: {
+          facebook: 'https://facebook.com/vanessa.hartwell.realtor',
+          twitter: 'https://twitter.com/vanessa_hartwell',
+          linkedin: 'https://linkedin.com/in/vanessahartwell',
+          youtube: 'https://youtube.com/@vanessahartwellrealtor'
+        }
+      },
+      topRatedProducts: [
+        {
+          image: '../../../assets/img/product/1.png',
+          name: 'Luxury House In Greenville',
+          url: 'product-details.html',
+          rating: 5,
+          price: '#300,000,000',
+          oldPrice: '#350,000,000'
+        },
+        {
+          image: '../../../assets/img/product/2.png',
+          name: 'Apartment with Subunits',
+          url: 'product-details.html',
+          rating: 5,
+          price: '#140,000',
+          oldPrice: '#155,000'
+        },
+        {
+          image: '../../../assets/img/product/3.png',
+          name: '3 Rooms Manhattan',
+          url: 'product-details.html',
+          rating: 3.5,
+          price: '#800,000,000',
+          oldPrice: '#890,000,000'
+        }
+      ],
+      contact: {
+        phone: '09033246432',
+        whatsapp: '2349033246432'
+      }
     }
     // More property objects can go here...
   ];
@@ -160,13 +176,18 @@ export class PropertyDetailComponent implements OnInit {
     });
   }
 
-  callAgent(): void {
-    window.location.href = 'tel:08147300000';
+  callAgent() {
+    if (this.property?.contact?.phone) {
+      window.location.href = `tel:${this.property.contact.phone}`;
+    }
   }
 
-  chatWhatsApp(): void {
-    window.open('https://wa.me/2348030000000', '_blank');
+  chatWhatsApp() {
+    if (this.property?.contact?.whatsapp) {
+      window.open(`https://wa.me/${this.property.contact.whatsapp}`, '_blank');
+    }
   }
+
 
   requestCallback(): void {
     alert('A callback request has been submitted.');
