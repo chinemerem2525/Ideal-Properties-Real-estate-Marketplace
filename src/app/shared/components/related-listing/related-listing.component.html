@@ -24,7 +24,7 @@
             </div>
             <div class="property-details">
               <span class="type" [class.red-text]="property.type === 'Terraced'">{{ property.type }}</span>
-              <a href="property-detail">
+              <a [routerLink]="['/listings/property-details', property.id]">
                 <h3>{{ property.title }}</h3>
               </a>
               <!-- <h3>{{ property.title }}</h3> -->

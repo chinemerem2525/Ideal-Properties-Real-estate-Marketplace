@@ -2,7 +2,7 @@
 
   <section class="luxury-listings carousel-container">
      <div class="container">
-    <h2 class="title">Featured Listings in Lagos</h2>
+    <h2 class="title">Top Listings in Lagos</h2>
     <p class="subtitle">Some of the finest luxury listings in the market, handpicked just for you</p>
 
         <div class="carousel-controls slick-slide-arrow-1 slick-slide-dots-1">
@@ -28,7 +28,7 @@
             <div class="property-details">
               <span class="type" [class.red-text]="property.type === 'Terraced'">{{ property.type }}</span>
               <!-- <h3>{{ property.title }}</h3> -->
-               <a href="property-detail">
+               <a  [routerLink]="['listings/property-details', property.id]">
                 <h3>{{ property.title }}</h3>
               </a>
               <p class="location"><i class="fa fa-map-marker"></i> {{ property.location }}</p>
