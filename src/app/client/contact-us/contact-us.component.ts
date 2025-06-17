@@ -6,10 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact-us.component.scss']
 })
 export class ContactUsComponent implements OnInit {
+ form = {
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  };
+
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+    sendMessage() {
+    console.log('Message sent:', this.form);
+    alert('Thank you! Your message has been sent.');
+    this.form = { name: '', email: '', subject: '', message: '' };
   }
 
 }
