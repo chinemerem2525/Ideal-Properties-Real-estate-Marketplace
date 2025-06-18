@@ -19,6 +19,69 @@
     </div>
     <!-- BREADCRUMB AREA END -->
 
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Our Contact Information</h3>
+          <p>Need to talk to someone? Kindly reach out to us via any of our communication channels with the details below</p>
+
+          <div class="info-item"><i class="fas fa-map-marker-alt"></i> 3/5 Modupe Alakija Cresent, Ikoyi , Lagos</div>
+          <div class="info-item"><i class="fas fa-envelope"></i> Email: hello@cwlagos.com</div>
+          <div class="info-item"><i class="fas fa-phone"></i> Call: (234) 909 -327 2547</div>
+
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3>We want to hear form you!</h3>
+          <form (ngSubmit)="sendMessage()">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="input-item input-item-name ltn__custom-icon">
+                  <input type="text" placeholder="Enter your name" [(ngModel)]="form.name" name="name" required>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="input-item input-item-email ltn__custom-icon">
+                  <input type="email" placeholder="Enter email address" [(ngModel)]="form.email" name="email" required>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="input-item input-item-phone ltn__custom-icon">
+                  <input type="text" placeholder="Enter phone number" [(ngModel)]="form.phone" name="phone" required>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="input-item input-item-textarea ltn__custom-icon">
+                  <input type="text" placeholder="Subject" [(ngModel)]="form.subject" name="subject" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-item input-item-textarea ltn__custom-icon">
+              <textarea placeholder="Enter Message" [(ngModel)]="form.message" name="message" rows="5" required></textarea>
+            </div>
+
+            <p>
+              <label class="input-info-save mb-0">
+                <input type="checkbox" [(ngModel)]="form.remember" name="remember"> Save my name, email, and website in this browser for the next time I comment.
+              </label>
+            </p>
+
+            <div class="btn-wrapper mt-0">
+              <button class="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">get a free service</button>
+            </div>
+            <p class="form-messege mb-0 mt-20"></p>
+          </form>
+        </div>
+      </div>
+
+
+
        <!-- CONTACT MESSAGE AREA START -->
     <div class="ltn__contact-message-area mb-120 mb--100">
         <div class="container">
@@ -72,7 +135,6 @@
         </div>
     </div>
     <!-- CONTACT MESSAGE AREA END -->
-     
          <!-- GOOGLE MAP AREA START -->
     <div class="google-map mb-120">
 
