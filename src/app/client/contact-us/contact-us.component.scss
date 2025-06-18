@@ -1,3 +1,13 @@
+.page-title, .home-btn
+{
+  color: #f9f9f9;
+}
+
+.page-crumb{
+  color: #ccc;
+  text-decoration-color: #ccc;
+}
+
 .contact-container {
   display: flex;
   background: #f9f9f9;
@@ -86,8 +96,8 @@
 
     button {
       align-self: flex-end;
-      background: #ff5e5e;
-      color: white;
+      background: #003049;
+      // color: white;
       border: none;
       padding: 12px 25px;
       border-radius: 6px;

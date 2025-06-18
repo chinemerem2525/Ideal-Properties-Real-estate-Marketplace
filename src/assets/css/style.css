@@ -14525,10 +14525,12 @@ input.cart-plus-minus-box {
   height: 100%;
   top: 0;
   left: 0;
-  background: var(--white); }
+  background: var(--white);
+  border-radius: 2px;
+  border: 1px solid var(--ltn__heading-color); }
 
 .btn-effect-1:hover {
-  color: var(--ltn__heading-color); }
+  color: var(--ltn__heading-color);}
   .btn-effect-1:hover::after {
     width: 100%; }
 
