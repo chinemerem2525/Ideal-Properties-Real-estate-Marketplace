@@ -43,8 +43,8 @@ properties = [
     price: '$34,900',
     priceLabel: '/Month'
   },
-    {
-    image: '../../assets/img/product-3/1.jpg',
+  {
+    image: '../../assets/img/service/21.jpg',
     title: '2 Bedroom Apartment With Bq',
     location: 'Belmont Gardens, Chicago',
     beds: 3,
@@ -55,64 +55,59 @@ properties = [
     priceLabel: '/Month'
   },
   {
-    image: '../../assets/img/product-3/2.jpg',
-    agentImage: '../../assets/img/blog/author.jpg',
-    title: 'New Apartment Nice View',
-    location: 'Belmont Gardens, Chicago',
+    image: '../../assets/img/service/31.jpg',
+    title: 'Newly Built 2 Bedroom Flat',
+    location: 'Banana Island, Lagos',
     beds: 3,
     baths: 2,
     squareFt: 3450,
     badge: 'For Sale',
-    price: '$34,900',
-    priceLabel: '/Month'
+    price: '₦190,000',
+    priceLabel: '/Day'
   },
   {
     image: '../../assets/img/product-3/3.jpg',
-    agentImage: '../../assets/img/blog/author.jpg',
-    title: 'New Apartment Nice View',
-    location: 'Belmont Gardens, Chicago',
+    title: 'Decent Room And Parlour Self Con',
+    location: 'Ikeja, Lagos',
     beds: 3,
     baths: 2,
     squareFt: 3450,
     badge: 'For Rent',
-    price: '$34,900',
-    priceLabel: '/Month'
+    price: '₦150,000',
+    priceLabel: '/Day'
   },
     {
     image: '../../assets/img/product-3/1.jpg',
-    agentImage: '../../assets/img/blog/author.jpg',
-    title: 'New Apartment Nice View',
-    location: 'Belmont Gardens, Chicago',
+    title: 'Luxury One Bedroom Mini Flat',
+    location: 'Lekki Phase 1, Lagos',
     beds: 3,
     baths: 2,
     squareFt: 3450,
     badge: 'For Rent',
-    price: '$34,900',
-    priceLabel: '/Month'
+    price: '₦270,000',
+    priceLabel: '/Day'
   },
   {
     image: '../../assets/img/product-3/2.jpg',
-    agentImage: '../../assets/img/blog/author.jpg',
-    title: 'New Apartment Nice View',
-    location: 'Belmont Gardens, Chicago',
+    title: 'Newly Built 1 Bedroom Flat',
+    location: 'Ikate, Lagos',
     beds: 3,
     baths: 2,
     squareFt: 3450,
     badge: 'For Sale',
-    price: '$34,900',
-    priceLabel: '/Month'
+    price: '₦100,000',
+    priceLabel: '/Day'
   },
   {
     image: '../../assets/img/product-3/3.jpg',
-    agentImage: '../../assets/img/blog/author.jpg',
-    title: 'New Apartment Nice View',
-    location: 'Belmont Gardens, Chicago',
+    title: 'Newly Built 3 Bedroom Apartment',
+    location: 'Ikoyi, Lagos',
     beds: 3,
     baths: 2,
     squareFt: 3450,
     badge: 'For Rent',
-    price: '$34,900',
-    priceLabel: '/Month'
+    price: '₦130,000',
+    priceLabel: '/Day'
   }
 ];
 

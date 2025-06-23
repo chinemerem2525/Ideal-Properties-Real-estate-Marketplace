@@ -5,7 +5,9 @@
     <div class="carousel-wrapper carousel">
       <div class="property-card property-item" *ngFor="let property of properties">
         <div class="image-wrapper">
+
           <img [src]="property.image" alt="Property image">
+        
           <div class="badges">
             <span class="badge" *ngFor="let badge of property.badges">{{ badge }}</span>
           </div>
