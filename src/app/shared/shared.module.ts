@@ -9,6 +9,7 @@ import { ApartmentsComponent } from './components/apartments/apartments.componen
 import { FormsModule } from '@angular/forms';
 import { RelatedListingComponent } from './components/related-listing/related-listing.component';
 import { RouterModule } from '@angular/router';
+import { AllShortletsComponent } from './components/all-shortlets/all-shortlets.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { RouterModule } from '@angular/router';
     TopListingsComponent,
     BrowsePropertiesCtaComponent,
     ApartmentsComponent,
-    RelatedListingComponent
+    RelatedListingComponent,
+    AllShortletsComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +35,8 @@ import { RouterModule } from '@angular/router';
     TopListingsComponent,
     BrowsePropertiesCtaComponent,
     ApartmentsComponent,
-    RelatedListingComponent
+    RelatedListingComponent,
+    AllShortletsComponent
 
   ]
 })
