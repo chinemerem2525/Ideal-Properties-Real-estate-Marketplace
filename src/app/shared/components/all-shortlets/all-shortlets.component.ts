@@ -117,7 +117,6 @@ properties = [
   }
 ];
 
-
   constructor() { }
 
   ngOnInit(): void {
