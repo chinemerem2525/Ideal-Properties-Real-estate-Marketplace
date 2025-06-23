@@ -1,44 +1,34 @@
-<div class="property-grid-wrapper">
-  <div class="property-card" *ngFor="let property of properties">
-    <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
-      <div class="product-img">
-        <a href="product-details.html"><img [src]="property.image" alt="property image" /></a>
-        <div class="real-estate-agent">
-          <div class="agent-img">
-            <a href="team-details.html"><img [src]="property.agentImage" alt="agent image" /></a>
+
+
+<section class="luxury-listings">
+  <div class="container">
+    <div class="carousel-wrapper carousel">
+      <div class="property-card property-item" *ngFor="let property of properties">
+        <div class="image-wrapper">
+          <img [src]="property.image" alt="Property image">
+          <div class="badges">
+            <span class="badge" *ngFor="let badge of property.badges">{{ badge }}</span>
+          </div>
+          <div class="price">{{ property.price }}</div>
+          <div class="icons">
+            <button class="icon"><i class="fa fa-heart"></i></button>
+            <button class="icon"><i class="fa fa-retweet"></i></button>
           </div>
         </div>
-      </div>
-      <div class="product-info">
-        <div class="product-badge">
-          <ul>
-            <li class="sale-badg">{{ property.badge }}</li>
-          </ul>
-        </div>
-        <h2 class="product-title"><a href="product-details.html">{{ property.title }}</a></h2>
-        <div class="product-img-location">
-          <ul>
-            <li><a href="locations.html"><i class="flaticon-pin"></i> {{ property.location }}</a></li>
-          </ul>
-        </div>
-        <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-          <li><span>{{ property.beds }}</span> Bed</li>
-          <li><span>{{ property.baths }}</span> Bath</li>
-          <li><span>{{ property.squareFt }}</span> Sq Ft</li>
-        </ul>
-        <div class="product-hover-action">
-          <ul>
-            <li><a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal"><i class="flaticon-expand"></i></a></li>
-            <li><a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal"><i class="flaticon-heart-1"></i></a></li>
-            <li><a href="product-details.html" title="Product Details"><i class="flaticon-add"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="product-info-bottom">
-        <div class="product-price">
-          <span>{{ property.price }}<label>{{ property.priceLabel }}</label></span>
+        <div class="property-details">
+          <span class="type" [class.red-text]="property.type === 'Terraced'">{{ property.type }}</span>
+          <a [routerLink]="['/listings/property-details', property.id]">
+            <h3>{{ property.title }}</h3>
+          </a>
+          <p class="location"><i class="fa fa-map-marker"></i> {{ property.location }}</p>
+          <p>Beds: {{ property.beds }} &nbsp; Baths: {{ property.baths }}</p>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
+
+
+<!-- Related-listings-->
+
+
