@@ -7,7 +7,7 @@
         <div class="image-wrapper">
 
           <img [src]="property.image" alt="Property image">
-        
+
           <div class="badges">
             <span class="badge" *ngFor="let badge of property.badges">{{ badge }}</span>
           </div>
@@ -22,7 +22,7 @@
           <a [routerLink]="['/listings/property-details', property.id]">
             <h3>{{ property.title }}</h3>
           </a>
-          <p class="location"><i class="fa fa-map-marker"></i> {{ property.location }}</p>
+          <p class="location"><i class="flaticon-pin"></i> {{ property.location }}</p>
           <p>Beds: {{ property.beds }} &nbsp; Baths: {{ property.baths }}</p>
         </div>
       </div>

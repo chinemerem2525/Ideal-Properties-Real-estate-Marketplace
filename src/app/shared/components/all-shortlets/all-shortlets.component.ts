@@ -14,11 +14,10 @@ properties = [
     location: 'Lekki phase 1',
     beds: 3,
     baths: 2,
-    type: '2 Bed',
+    type: '2 Bedroom',
     badges: ['Apartment'],
-    squareFt: 3450,
     badge: 'For Rent',
-    price: '$34,900',
+    price: '₦200,000',
     priceLabel: '/Month'
   },
   {
@@ -27,10 +26,11 @@ properties = [
     location: 'Lekki phase 1',
     beds: 3,
     baths: 2,
-    squareFt: 3450,
+    type: '4 Bedroom',
+    badges: ['Short Stay'],
     badge: 'For Sale',
-    price: '$34,900',
-    priceLabel: '/Month'
+    price: '₦270,000',
+    priceLabel: '/Day'
   },
   {
     image: '../../assets/img/img-slide/32.jpg',
@@ -38,21 +38,23 @@ properties = [
     location: 'Ikate, Lekki, Lagos.',
     beds: 3,
     baths: 2,
-    squareFt: 3450,
+    type: '2 Bedroom',
+    badges: ['Apartment'],
     badge: 'For Rent',
-    price: '$34,900',
-    priceLabel: '/Month'
+    price: '₦270,000',
+    priceLabel: '/Day'
   },
   {
     image: '../../assets/img/service/21.jpg',
     title: '2 Bedroom Apartment With Bq',
-    location: 'Belmont Gardens, Chicago',
+    location: 'Lekki Phase 1, Lagos',
     beds: 3,
     baths: 2,
-    squareFt: 3450,
+    type: '2 Bedroom',
+    badges: ['Apartment'],
     badge: 'For Rent',
-    price: '$34,900',
-    priceLabel: '/Month'
+    price: '₦270,000',
+    priceLabel: '/Day'
   },
   {
     image: '../../assets/img/service/31.jpg',
@@ -60,29 +62,32 @@ properties = [
     location: 'Banana Island, Lagos',
     beds: 3,
     baths: 2,
-    squareFt: 3450,
+    type: '2 Bedroom',
+    badges: ['Apartment'],
     badge: 'For Sale',
     price: '₦190,000',
     priceLabel: '/Day'
   },
   {
-    image: '../../assets/img/product-3/3.jpg',
+    image: '../../assets/img/others/8.png',
     title: 'Decent Room And Parlour Self Con',
     location: 'Ikeja, Lagos',
     beds: 3,
     baths: 2,
-    squareFt: 3450,
+    type: 'Room And Parlour',
+    badges: ['Apartment'],
     badge: 'For Rent',
     price: '₦150,000',
     priceLabel: '/Day'
   },
-    {
-    image: '../../assets/img/product-3/1.jpg',
+  {
+    image: '../../assets/img/product/3.png',
     title: 'Luxury One Bedroom Mini Flat',
     location: 'Lekki Phase 1, Lagos',
     beds: 3,
     baths: 2,
-    squareFt: 3450,
+    type: 'Flat',
+    badges: ['Apartment'],
     badge: 'For Rent',
     price: '₦270,000',
     priceLabel: '/Day'
@@ -93,7 +98,8 @@ properties = [
     location: 'Ikate, Lagos',
     beds: 3,
     baths: 2,
-    squareFt: 3450,
+    type: '1 Bedroom',
+    badges: ['Apartment'],
     badge: 'For Sale',
     price: '₦100,000',
     priceLabel: '/Day'
@@ -104,7 +110,8 @@ properties = [
     location: 'Ikoyi, Lagos',
     beds: 3,
     baths: 2,
-    squareFt: 3450,
+    type: '3 Bedroom',
+    badges: ['Apartment'],
     badge: 'For Rent',
     price: '₦130,000',
     priceLabel: '/Day'
