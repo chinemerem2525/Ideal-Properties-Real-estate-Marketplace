@@ -31,3 +31,46 @@
   margin: 0;
   padding: 0;
 }
+
+  .image-wrapper {
+position: relative;
+
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0.3;
+          background-color: rgba(34, 34, 34, 0.6); // Overlay color
+          z-index: 1;
+        }
+
+      .badges {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+         z-index: 2;
+
+        .badge {
+          background: #3f4c6b;
+          color: #fff;
+          font-size: 0.7rem;
+          padding: 2px 6px;
+          border-radius: 4px;
+           z-index: 2;
+        }
+
+      }
+    }
