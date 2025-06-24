@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { RelatedListingComponent } from './components/related-listing/related-listing.component';
 import { RouterModule } from '@angular/router';
 import { AllShortletsComponent } from './components/all-shortlets/all-shortlets.component';
+import { AllShortletsSingleComponent } from './components/all-shortlets-single/all-shortlets-single.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AllShortletsComponent } from './components/all-shortlets/all-shortlets.
     BrowsePropertiesCtaComponent,
     ApartmentsComponent,
     RelatedListingComponent,
-    AllShortletsComponent
+    AllShortletsComponent,
+    AllShortletsSingleComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +38,8 @@ import { AllShortletsComponent } from './components/all-shortlets/all-shortlets.
     BrowsePropertiesCtaComponent,
     ApartmentsComponent,
     RelatedListingComponent,
-    AllShortletsComponent
+    AllShortletsComponent,
+    AllShortletsSingleComponent
 
   ]
 })

@@ -1,3 +1,4 @@
+import { AllShortletsSingleComponent } from "./all-shortlets-single/all-shortlets-single.component";
 import { AllShortletsComponent } from "./all-shortlets/all-shortlets.component";
 import { ApartmentsComponent } from "./apartments/apartments.component";
 import { BrowsePropertiesCtaComponent } from "./browse-properties-cta/browse-properties-cta.component";
@@ -16,7 +17,8 @@ export {
   BrowsePropertiesCtaComponent,
   ApartmentsComponent,
   RelatedListingComponent,
-  AllShortletsComponent
+  AllShortletsComponent,
+  AllShortletsSingleComponent
 
 }
 
