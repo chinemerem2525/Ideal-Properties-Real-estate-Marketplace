@@ -7,24 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllShortletsSingleComponent implements OnInit {
 shortStayListings = [
-  // {
-  //   image: '../../../assets/img/gallery/10.jpg',
-  //   type: 'Apartment',
-  //   price: '₦170,000',
-  //   frequency: '/Day',
-  //   title: 'Stylish 2-Bedroom Apartment',
-  //   description: 'Stylish 2-Bedroom Apartment / Flat Apartment for shortlet',
-  //   beds: 3,
-  //   baths: 2,
-  //   location: 'Lekki phase 1, Lagos',
-  //   badge: 'Short Stay',
-  //   agentImage: '../../../assets/img/blog/author.jpg',
-  //   agentName: 'William Seklo',
-  //   agentTitle: 'Realtor',
-  //   listedDate: '25-06-2025'
-  // },
     {
-    id: '678564',
+    id: 'IP56729',
     image: '../../assets/img/gallery/10.jpg',
     title: 'Stylish 2-Bedroom Apartment',
     description: 'Stylish 2-Bedroom Apartment / Flat Apartment for shortlet',
@@ -41,6 +25,7 @@ shortStayListings = [
     listedDate: '25-06-2025'
   },
   {
+    id: 'IP56729',
     image: '../../assets/img/img-slide/21.jpg',
     title: 'Luxurious 4-Bedroom Waterfront Duplex',
      description: 'Luxurious 4-Bedroom Waterfront Duplex / Duplex for shortlet',
@@ -58,6 +43,7 @@ shortStayListings = [
     listedDate: '25-06-2025'
   },
   {
+    id: 'IP56729',
     image: '../../assets/img/img-slide/32.jpg',
     title: 'Luxurious 2 Bedroom Apartment with Free Wi-Fi',
     description: 'Luxurious 2 Bedroom Apartment with Free Wi-Fi / 2 Bedroom Apartment for shortlet',
@@ -75,6 +61,7 @@ shortStayListings = [
     listedDate: '25-06-2025'
   },
   {
+    id: 'IP56729',
     image: '../../assets/img/service/21.jpg',
     title: '2 Bedroom Apartment With Bq',
     description: '2 Bedroom Apartment With Bq / Apartment for shortlet',
@@ -92,6 +79,7 @@ shortStayListings = [
     listedDate: '25-06-2025'
   },
   {
+    id: 'IP56729',
     image: '../../assets/img/service/31.jpg',
     title: 'Newly Built 2 Bedroom Flat',
     description: 'Newly Built 2 Bedroom Flat / Flat for shortlet',
@@ -109,6 +97,7 @@ shortStayListings = [
     listedDate: '25-06-2025'
   },
   {
+    id: 'IP56729',
     image: '../../assets/img/others/8.png',
     title: 'Decent Room And Parlour Self Con',
     description: 'Decent Room And Parlour Self Con / Self Con for shortlet',
@@ -126,6 +115,7 @@ shortStayListings = [
     listedDate: '25-06-2025'
   },
   {
+    id: 'IP56729',
     image: '../../assets/img/product/3.png',
     title: 'Luxury One Bedroom Mini Flat',
     description: 'Luxury One Bedroom Mini Flat / One Bedroom Apartment for shortlet',
@@ -143,6 +133,7 @@ shortStayListings = [
     listedDate: '25-06-2025'
   },
   {
+    id: 'IP56729',
     image: '../../assets/img/product-3/2.jpg',
     title: 'Newly Built 1 Bedroom Flat',
     description: 'Newly Built 1 Bedroom Flat / 1 Bedroom Flat Apartment for shortlet',
@@ -160,6 +151,7 @@ shortStayListings = [
     listedDate: '25-06-2025'
   },
   {
+    id: 'IP56729',
     image: '../../assets/img/product-3/3.jpg',
     title: 'Newly Built 3 Bedroom Apartment',
     description: 'Newly Built 3 Bedroom Apartment / 3 Bedroom Flat Apartment for shortlet',

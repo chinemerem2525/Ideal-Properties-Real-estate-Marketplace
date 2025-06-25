@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AllShortletsComponent implements OnInit {
 properties = [
   {
-    id: '678564',
+    id: 'IP56729',
     image: '../../assets/img/gallery/10.jpg',
     title: 'Stylish 2-Bedroom Apartment',
     location: 'Lekki phase 1',
@@ -21,6 +21,7 @@ properties = [
     priceLabel: '/Month'
   },
   {
+    id: 'IP56729',
     image: '../../assets/img/img-slide/21.jpg',
     title: 'Luxurious 4-Bedroom Waterfront Duplex',
     location: 'Lekki phase 1',
@@ -33,6 +34,7 @@ properties = [
     priceLabel: '/Day'
   },
   {
+    id: 'IP56729',
     image: '../../assets/img/img-slide/32.jpg',
     title: 'Luxurious 2 Bedroom Apartment with Free Wi-Fi',
     location: 'Ikate, Lekki, Lagos.',
@@ -45,6 +47,7 @@ properties = [
     priceLabel: '/Day'
   },
   {
+    id: 'IP56729',
     image: '../../assets/img/service/21.jpg',
     title: '2 Bedroom Apartment With Bq',
     location: 'Lekki Phase 1, Lagos',
@@ -57,6 +60,7 @@ properties = [
     priceLabel: '/Day'
   },
   {
+    id: 'IP56729',
     image: '../../assets/img/service/31.jpg',
     title: 'Newly Built 2 Bedroom Flat',
     location: 'Banana Island, Lagos',
@@ -69,6 +73,7 @@ properties = [
     priceLabel: '/Day'
   },
   {
+    id: 'IP56729',
     image: '../../assets/img/others/8.png',
     title: 'Decent Room And Parlour Self Con',
     location: 'Ikeja, Lagos',
@@ -81,6 +86,7 @@ properties = [
     priceLabel: '/Day'
   },
   {
+    id: 'IP56729',
     image: '../../assets/img/product/3.png',
     title: 'Luxury One Bedroom Mini Flat',
     location: 'Lekki Phase 1, Lagos',
@@ -93,6 +99,7 @@ properties = [
     priceLabel: '/Day'
   },
   {
+    id: 'IP56729',
     image: '../../assets/img/product-3/2.jpg',
     title: 'Newly Built 1 Bedroom Flat',
     location: 'Ikate, Lagos',
@@ -105,6 +112,7 @@ properties = [
     priceLabel: '/Day'
   },
   {
+    id: 'IP56729',
     image: '../../assets/img/product-3/3.jpg',
     title: 'Newly Built 3 Bedroom Apartment',
     location: 'Ikoyi, Lagos',
