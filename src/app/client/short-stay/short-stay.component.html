@@ -78,35 +78,35 @@
                                     </div>
 
 
-<section class="luxury-listings">
-  <div class="container">
-    <div class="carousel-wrapper carousel">
-      <div class="property-card property-item" *ngFor="let property of properties">
-        <div class="image-wrapper">
+                            <section class="luxury-listings">
+                              <div class="container">
+                                <div class="carousel-wrapper carousel">
+                                  <div class="property-card property-item" *ngFor="let property of properties">
+                                    <div class="image-wrapper">
 
-          <img [src]="property.image" alt="Property image">
+                                      <img [src]="property.image" alt="Property image">
 
-          <div class="badges">
-            <span class="badge" *ngFor="let badge of property.badges">{{ badge }}</span>
-          </div>
-          <div class="price">{{ property.price }}</div>
-          <div class="icons">
-            <button class="icon"><i class="fa fa-heart"></i></button>
-            <button class="icon"><i class="fa fa-retweet"></i></button>
-          </div>
-        </div>
-        <div class="property-details">
-          <span class="type" [class.red-text]="property.type === 'Terraced'">{{ property.type }}</span>
-          <a [routerLink]="['/listings/property-details', property.id]">
-            <h3>{{ property.title }}</h3>
-          </a>
-          <p class="location"><i class="flaticon-pin"></i> {{ property.location }}</p>
-          <p>Beds: {{ property.beds }} &nbsp; Baths: {{ property.baths }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+                                      <div class="badges">
+                                        <span class="badge" *ngFor="let badge of property.badges">{{ badge }}</span>
+                                      </div>
+                                      <div class="price">₦{{ property.price }}</div>
+                                      <div class="icons">
+                                        <button class="icon"><i class="fa fa-heart"></i></button>
+                                        <button class="icon"><i class="fa fa-retweet"></i></button>
+                                      </div>
+                                    </div>
+                                    <div class="property-details">
+                                      <span class="type" [class.red-text]="property.type === 'Terraced'">{{ property.type }}</span>
+                                      <a [routerLink]="['/listings/property-details', property.id]">
+                                        <h3>{{ property.title }}</h3>
+                                      </a>
+                                      <p class="location"><i class="flaticon-pin"></i> {{ property.location }}</p>
+                                      <p>Beds: {{ property.beds }} &nbsp; Baths: {{ property.baths }}</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </section>
 
 
 <!-- Related-listings-->
@@ -154,39 +154,41 @@
                         <label class="mb-30"><small>About 9,620 results (0.62 seconds) </small></label>
                         <!-- Advance Information widget -->
                         <div class="search-container">
-                          <form (ngSubmit)="searchProperty()">
-                            <input type="text" placeholder="Enter Location" [(ngModel)]="searchData.location" name="location" required>
+                          <form (ngSubmit)="searchProperty()" #searchForm="ngForm">
+  <input type="text" [(ngModel)]="searchData.location" name="location" placeholder="Enter Location" required />
 
-                            <select [(ngModel)]="searchData.purpose" name="purpose" required>
-                              <option value="shortlet">For Shortlet</option>
-                              <option value="sale">For Sale</option>
-                              <option value="rent">For Rent</option>
-                            </select> <br>
+  <!-- <input type="number" [(ngModel)]="searchData.beds" name="beds"> -->
+  <select [(ngModel)]="searchData.purpose" name="purpose" required>
+    <option value="shortlet">For Shortlet</option>
+    <option value="sale">For Sale</option>
+    <option value="rent">For Rent</option>
+  </select>
 
-                            <select [(ngModel)]="searchData.type" name="type">
-                              <option value="" disabled selected>Type</option>
-                              <option value="apartment">Apartment</option>
-                              <option value="duplex">Duplex</option>
-                              <option value="bungalow">Bungalow</option>
-                            </select> <br>
+  <select [(ngModel)]="searchData.type" name="type">
+    <option value="" disabled selected>Type</option>
+    <option value="apartment">Apartment</option>
+    <option value="duplex">Duplex</option>
+    <option value="bungalow">Bungalow</option>
+  </select>
 
-                            <select [(ngModel)]="searchData.beds" name="beds">
-                              <option value="" disabled selected>Beds</option>
-                              <option *ngFor="let b of [1,2,3,4,5,6]" [value]="b">{{ b }}</option>
-                            </select> <br>
+  <select [(ngModel)]="searchData.beds" name="beds">
+    <option value="" disabled selected>Beds</option>
+    <option *ngFor="let b of [1,2,3,4,5,6]" [value]="b">{{ b }}</option>
+  </select>
 
-                            <select [(ngModel)]="searchData.minPrice" name="minPrice">
-                              <option value="" disabled selected>Min Price</option>
-                              <option *ngFor="let p of prices" [value]="p">₦{{ p | number }}</option>
-                            </select> <br>
+  <select [(ngModel)]="searchData.minPrice" name="minPrice">
+    <option value="" disabled selected>Min Price</option>
+    <option *ngFor="let p of prices" [value]="p">₦{{ p | number }}</option>
+  </select>
 
-                            <select [(ngModel)]="searchData.maxPrice" name="maxPrice">
-                              <option value="" disabled selected>Max price</option>
-                              <option *ngFor="let p of prices" [value]="p">₦{{ p | number }}</option>
-                            </select>
+  <select [(ngModel)]="searchData.maxPrice" name="maxPrice">
+    <option value="" disabled selected>Max Price</option>
+    <option *ngFor="let p of prices" [value]="p">₦{{ p | number }}</option>
+  </select>
 
-                            <button type="submit">SEARCH</button>
-                          </form>
+  <button type="submit">SEARCH</button>
+</form>
+
                         </div>
                         <!-- Category Widget -->
                         <div class="widget ltn__menu-widget d-none">

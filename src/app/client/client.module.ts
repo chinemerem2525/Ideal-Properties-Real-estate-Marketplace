@@ -16,16 +16,14 @@ import { PropertyDetailComponent } from './property-detail/property-detail.compo
 
 @NgModule({
   declarations: [
-
-
     HomeComponent,
-        AboutComponent,
-        ContactUsComponent,
-        NewProjectComponent,
-        PropertiesComponent,
-        ServicesComponent,
-        ShortStayComponent,
-        PropertyDetailComponent
+    AboutComponent,
+    ContactUsComponent,
+    NewProjectComponent,
+    PropertiesComponent,
+    ServicesComponent,
+    ShortStayComponent,
+    PropertyDetailComponent
   ],
   imports: [
     CommonModule,
