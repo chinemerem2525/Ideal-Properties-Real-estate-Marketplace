@@ -76,7 +76,44 @@
                                             </form>
                                         </div>
                                     </div>
-                                    <app-all-shortlets></app-all-shortlets>
+
+
+<section class="luxury-listings">
+  <div class="container">
+    <div class="carousel-wrapper carousel">
+      <div class="property-card property-item" *ngFor="let property of properties">
+        <div class="image-wrapper">
+
+          <img [src]="property.image" alt="Property image">
+
+          <div class="badges">
+            <span class="badge" *ngFor="let badge of property.badges">{{ badge }}</span>
+          </div>
+          <div class="price">{{ property.price }}</div>
+          <div class="icons">
+            <button class="icon"><i class="fa fa-heart"></i></button>
+            <button class="icon"><i class="fa fa-retweet"></i></button>
+          </div>
+        </div>
+        <div class="property-details">
+          <span class="type" [class.red-text]="property.type === 'Terraced'">{{ property.type }}</span>
+          <a [routerLink]="['/listings/property-details', property.id]">
+            <h3>{{ property.title }}</h3>
+          </a>
+          <p class="location"><i class="flaticon-pin"></i> {{ property.location }}</p>
+          <p>Beds: {{ property.beds }} &nbsp; Baths: {{ property.baths }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Related-listings-->
+
+
+
+                                    <!-- <app-all-shortlets></app-all-shortlets> -->
                                 </div>
                             </div>
                         </div>
@@ -146,7 +183,7 @@
                             <select [(ngModel)]="searchData.maxPrice" name="maxPrice">
                               <option value="" disabled selected>Max price</option>
                               <option *ngFor="let p of prices" [value]="p">₦{{ p | number }}</option>
-                            </select> 
+                            </select>
 
                             <button type="submit">SEARCH</button>
                           </form>
