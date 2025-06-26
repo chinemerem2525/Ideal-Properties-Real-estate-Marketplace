@@ -116,41 +116,41 @@
                         <h3 class="mb-10">Advance Information</h3>
                         <label class="mb-30"><small>About 9,620 results (0.62 seconds) </small></label>
                         <!-- Advance Information widget -->
-<div class="search-container">
-  <form (ngSubmit)="searchProperty()">
-    <input type="text" placeholder="Enter Location" [(ngModel)]="searchData.location" name="location" required>
+                        <div class="search-container">
+                          <form (ngSubmit)="searchProperty()">
+                            <input type="text" placeholder="Enter Location" [(ngModel)]="searchData.location" name="location" required>
 
-    <select [(ngModel)]="searchData.purpose" name="purpose" required>
-      <option value="shortlet">For Shortlet</option>
-      <option value="sale">For Sale</option>
-      <option value="rent">For Rent</option>
-    </select>
+                            <select [(ngModel)]="searchData.purpose" name="purpose" required>
+                              <option value="shortlet">For Shortlet</option>
+                              <option value="sale">For Sale</option>
+                              <option value="rent">For Rent</option>
+                            </select> <br>
 
-    <select [(ngModel)]="searchData.type" name="type">
-      <option value="" disabled selected>Type</option>
-      <option value="apartment">Apartment</option>
-      <option value="duplex">Duplex</option>
-      <option value="bungalow">Bungalow</option>
-    </select>
+                            <select [(ngModel)]="searchData.type" name="type">
+                              <option value="" disabled selected>Type</option>
+                              <option value="apartment">Apartment</option>
+                              <option value="duplex">Duplex</option>
+                              <option value="bungalow">Bungalow</option>
+                            </select> <br>
 
-    <select [(ngModel)]="searchData.beds" name="beds">
-      <option value="" disabled selected>Beds</option>
-      <option *ngFor="let b of [1,2,3,4,5,6]" [value]="b">{{ b }}</option>
-    </select>
+                            <select [(ngModel)]="searchData.beds" name="beds">
+                              <option value="" disabled selected>Beds</option>
+                              <option *ngFor="let b of [1,2,3,4,5,6]" [value]="b">{{ b }}</option>
+                            </select> <br>
 
-    <select [(ngModel)]="searchData.minPrice" name="minPrice">
-      <option value="" disabled selected>Min Price</option>
-      <option *ngFor="let p of prices" [value]="p">₦{{ p | number }}</option>
-    </select>
+                            <select [(ngModel)]="searchData.minPrice" name="minPrice">
+                              <option value="" disabled selected>Min Price</option>
+                              <option *ngFor="let p of prices" [value]="p">₦{{ p | number }}</option>
+                            </select> <br>
 
-    <select [(ngModel)]="searchData.maxPrice" name="maxPrice">
-      <option value="" disabled selected>Max price</option>
-      <option *ngFor="let p of prices" [value]="p">₦{{ p | number }}</option>
-    </select>
+                            <select [(ngModel)]="searchData.maxPrice" name="maxPrice">
+                              <option value="" disabled selected>Max price</option>
+                              <option *ngFor="let p of prices" [value]="p">₦{{ p | number }}</option>
+                            </select> 
 
-    <button type="submit">SEARCH</button>
-  </form>
-</div>
+                            <button type="submit">SEARCH</button>
+                          </form>
+                        </div>
                         <!-- Category Widget -->
                         <div class="widget ltn__menu-widget d-none">
                             <h4 class="ltn__widget-title ltn__widget-title-border">Product categories</h4>

@@ -12,19 +12,14 @@
 }
 
 .search-container {
-  background: #f9fbff;
-  padding: 1rem;
+  background: var(--section-bg-1);
+  padding: 0.5rem;
   border-radius: 12px;
   width: 100%;
-  max-width: 320px;
+  // max-width: 320px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-.search-container .title {
-  text-align: center;
-  font-weight: 700;
-  margin-bottom: 1.2rem;
-}
 
 .search-container form {
   display: flex;
@@ -36,7 +31,8 @@
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  width: 100%;
+  // width: 100%;
+  margin-bottom: rem;
   font-size: 14px;
 }
 
