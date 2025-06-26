@@ -155,39 +155,44 @@
                         <!-- Advance Information widget -->
                         <div class="search-container">
                           <form (ngSubmit)="searchProperty()" #searchForm="ngForm">
-  <input type="text" [(ngModel)]="searchData.location" name="location" placeholder="Enter Location" required />
+                            <input type="text" [(ngModel)]="searchData.location" name="location" placeholder="Enter Location" required />
+                             <input type="text" placeholder="Type(Apartment, Flat, Self Con)" [(ngModel)]="searchData.type" name="type" />
+                             <input type="text" placeholder="Purpose(Rent, Sale, Shortlet)" [(ngModel)]="searchData.purpose" name="purpose" required />
+                            <input placeholder="Beds" type="number" [(ngModel)]="searchData.beds" name="beds" />
+                             <input placeholder="Min Price" type="number" [(ngModel)]="searchData.minPrice" name="minPrice" />
+                             <input placeholder="Max Price" type="number" [(ngModel)]="searchData.maxPrice" name="maxPrice" />
 
-  <!-- <input type="number" [(ngModel)]="searchData.beds" name="beds"> -->
-  <select [(ngModel)]="searchData.purpose" name="purpose" required>
-    <option value="shortlet">For Shortlet</option>
-    <option value="sale">For Sale</option>
-    <option value="rent">For Rent</option>
-  </select>
 
-  <select [(ngModel)]="searchData.type" name="type">
-    <option value="" disabled selected>Type</option>
-    <option value="apartment">Apartment</option>
-    <option value="duplex">Duplex</option>
-    <option value="bungalow">Bungalow</option>
-  </select>
+                            <!-- <select [(ngModel)]="searchData.purpose" name="purpose" required>
+                              <option value="shortlet">For Shortlet</option>
+                              <option value="sale">For Sale</option>
+                              <option value="rent">For Rent</option>
+                            </select>
 
-  <select [(ngModel)]="searchData.beds" name="beds">
-    <option value="" disabled selected>Beds</option>
-    <option *ngFor="let b of [1,2,3,4,5,6]" [value]="b">{{ b }}</option>
-  </select>
+                            <select [(ngModel)]="searchData.type" name="type">
+                              <option value="" disabled selected>Type</option>
+                              <option value="apartment">Apartment</option>
+                              <option value="duplex">Duplex</option>
+                              <option value="bungalow">Bungalow</option>
+                            </select>
 
-  <select [(ngModel)]="searchData.minPrice" name="minPrice">
-    <option value="" disabled selected>Min Price</option>
-    <option *ngFor="let p of prices" [value]="p">₦{{ p | number }}</option>
-  </select>
+                            <select [(ngModel)]="searchData.beds" name="beds">
+                              <option value="" disabled selected>Beds</option>
+                              <option *ngFor="let b of [1,2,3,4,5,6]" [value]="b">{{ b }}</option>
+                            </select>
 
-  <select [(ngModel)]="searchData.maxPrice" name="maxPrice">
-    <option value="" disabled selected>Max Price</option>
-    <option *ngFor="let p of prices" [value]="p">₦{{ p | number }}</option>
-  </select>
+                            <select [(ngModel)]="searchData.minPrice" name="minPrice">
+                              <option value="" disabled selected>Min Price</option>
+                              <option *ngFor="let p of prices" [value]="p">₦{{ p | number }}</option>
+                            </select>
 
-  <button type="submit">SEARCH</button>
-</form>
+                            <select [(ngModel)]="searchData.maxPrice" name="maxPrice">
+                              <option value="" disabled selected>Max Price</option>
+                              <option *ngFor="let p of prices" [value]="p">₦{{ p | number }}</option>
+                            </select> -->
+
+                            <button type="submit">SEARCH</button>
+                          </form>
 
                         </div>
                         <!-- Category Widget -->

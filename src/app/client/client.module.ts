@@ -11,7 +11,7 @@ import { NewProjectComponent } from './new-project/new-project.component';
 import { PropertiesComponent } from './properties/properties.component';
 import { ServicesComponent } from './services/services.component';
 import { ShortStayComponent } from './short-stay/short-stay.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PropertyDetailComponent } from './property-detail/property-detail.component';
 
 @NgModule({
@@ -29,7 +29,8 @@ import { PropertyDetailComponent } from './property-detail/property-detail.compo
     CommonModule,
     ClientRoutingModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class ClientModule { }

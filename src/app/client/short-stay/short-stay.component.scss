@@ -26,13 +26,22 @@
   flex-direction: column;
 }
 
-.search-container input,
-.search-container select {
-  padding: 10px;
+// .search-container input,
+// .search-container select {
+//   padding: 10px;
+//   border: 1px solid #ccc;
+//   border-radius: 6px;
+//   // width: 100%;
+//   margin-bottom: rem;
+//   font-size: 14px;
+// }
+
+.search-container input {
+  padding: 0.6rem;
   border: 1px solid #ccc;
   border-radius: 6px;
   // width: 100%;
-  margin-bottom: rem;
+  margin-bottom: 1rem;
   font-size: 14px;
 }
 

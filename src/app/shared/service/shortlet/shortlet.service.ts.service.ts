@@ -13,8 +13,8 @@ export class ShortletService {
       location: 'Lekki phase 1',
       beds: 3,
       baths: 2,
-      type: '2 Bedroom',
-      badges: ['Apartment'],
+      type: 'Apartment',
+      badges: ['Short Stay'],
       badge: 'For Rent',
       price: '200,000',
       priceLabel: '/Month'
@@ -26,7 +26,7 @@ export class ShortletService {
     location: 'Lekki phase 1',
     beds: 3,
     baths: 2,
-    type: '4 Bedroom',
+    type: 'Apartment',
     badges: ['Short Stay'],
     badge: 'For Sale',
     price: '270,000',
@@ -39,8 +39,8 @@ export class ShortletService {
     location: 'Ikate, Lekki, Lagos.',
     beds: 3,
     baths: 2,
-    type: '2 Bedroom',
-    badges: ['Apartment'],
+    type: 'Apartment',
+    badges: ['Short Stay'],
     badge: 'For Rent',
     price: '270,000',
     priceLabel: '/Day'
@@ -52,8 +52,8 @@ export class ShortletService {
     location: 'Lekki Phase 1, Lagos',
     beds: 3,
     baths: 2,
-    type: '2 Bedroom',
-    badges: ['Apartment'],
+    type: 'Apartment',
+    badges: ['Short Stay'],
     badge: 'For Rent',
     price: '270,000',
     priceLabel: '/Day'
@@ -65,8 +65,8 @@ export class ShortletService {
     location: 'Banana Island, Lagos',
     beds: 3,
     baths: 2,
-    type: '2 Bedroom',
-    badges: ['Apartment'],
+    type: 'Apartment',
+    badges: ['Short Stay'],
     badge: 'For Sale',
     price: '190,000',
     priceLabel: '/Day'
@@ -78,8 +78,8 @@ export class ShortletService {
     location: 'Ikeja, Lagos',
     beds: 2,
     baths: 2,
-    type: 'Room And Parlour',
-    badges: ['Apartment'],
+    type: 'Self Con',
+    badges: ['Short Stay'],
     badge: 'For Rent',
     price: '150,000',
     priceLabel: '/Day'
@@ -92,7 +92,7 @@ export class ShortletService {
     beds: 3,
     baths: 2,
     type: 'Flat',
-    badges: ['Apartment'],
+    badges: ['Short Stay'],
     badge: 'For Rent',
     price: '270,000',
     priceLabel: '/Day'
@@ -104,8 +104,8 @@ export class ShortletService {
     location: 'Ikate, Lagos',
     beds: 3,
     baths: 2,
-    type: '1 Bedroom',
-    badges: ['Apartment'],
+    type: 'FLat',
+    badges: ['Short Stay'],
     badge: 'For Sale',
     price: '100,000',
     priceLabel: '/Day'
@@ -117,15 +117,15 @@ export class ShortletService {
     location: 'Ikoyi, Lagos',
     beds: 3,
     baths: 2,
-    type: '3 Bedroom',
-    badges: ['Apartment'],
+    type: 'Apartment',
+    badges: ['Short Stay'],
     badge: 'For Rent',
     price: '130,000',
     priceLabel: '/Day'
   }
   ];
 
-  getShortlets(): Shortlet[] {
+   getShortlets(): Shortlet[] {
     return this.shortlets;
   }
 
@@ -134,7 +134,7 @@ export class ShortletService {
       const priceValue = parseInt(s.price.replace(/[^\d]/g, ''), 10);
 
       return (!criteria.location || s.location.toLowerCase().includes(criteria.location.toLowerCase())) &&
-             (!criteria.purpose || s.badge.toLowerCase().includes(criteria.purpose.toLowerCase())) &&
+             (!criteria.purpose || s.badge.toLowerCase() === criteria.purpose.toLowerCase()) &&
              (!criteria.type || s.type.toLowerCase() === criteria.type.toLowerCase()) &&
              (!criteria.beds || s.beds === +criteria.beds) &&
              (!criteria.minPrice || priceValue >= +criteria.minPrice) &&
