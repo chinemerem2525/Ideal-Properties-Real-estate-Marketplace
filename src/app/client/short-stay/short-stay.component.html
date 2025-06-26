@@ -76,44 +76,35 @@
                                             </form>
                                         </div>
                                     </div>
+                                    <section class="shortlet-listings">
+                                      <div class="container">
+                                        <div class="carousel-wrapper carousel">
+                                          <div class="property-card property-item" *ngFor="let property of properties">
+                                            <div class="image-wrapper">
 
+                                              <img [src]="property.image" alt="Property image">
 
-                            <section class="luxury-listings">
-                              <div class="container">
-                                <div class="carousel-wrapper carousel">
-                                  <div class="property-card property-item" *ngFor="let property of properties">
-                                    <div class="image-wrapper">
-
-                                      <img [src]="property.image" alt="Property image">
-
-                                      <div class="badges">
-                                        <span class="badge" *ngFor="let badge of property.badges">{{ badge }}</span>
+                                              <div class="badges">
+                                                <span class="badge" *ngFor="let badge of property.badges">{{ badge }}</span>
+                                              </div>
+                                              <div class="price">₦{{ property.price }}</div>
+                                              <div class="icons">
+                                                <button class="icon"><i class="fa fa-heart"></i></button>
+                                                <button class="icon"><i class="fa fa-retweet"></i></button>
+                                              </div>
+                                            </div>
+                                            <div class="property-details">
+                                              <span class="type" [class.red-text]="property.type === 'Terraced'">{{ property.type }}</span>
+                                              <a [routerLink]="['/listings/property-details', property.id]">
+                                                <h3>{{ property.title }}</h3>
+                                              </a>
+                                              <p class="location"><i class="flaticon-pin"></i> {{ property.location }}</p>
+                                              <p>Beds: {{ property.beds }} &nbsp; Baths: {{ property.baths }}</p>
+                                            </div>
+                                          </div>
+                                        </div>
                                       </div>
-                                      <div class="price">₦{{ property.price }}</div>
-                                      <div class="icons">
-                                        <button class="icon"><i class="fa fa-heart"></i></button>
-                                        <button class="icon"><i class="fa fa-retweet"></i></button>
-                                      </div>
-                                    </div>
-                                    <div class="property-details">
-                                      <span class="type" [class.red-text]="property.type === 'Terraced'">{{ property.type }}</span>
-                                      <a [routerLink]="['/listings/property-details', property.id]">
-                                        <h3>{{ property.title }}</h3>
-                                      </a>
-                                      <p class="location"><i class="flaticon-pin"></i> {{ property.location }}</p>
-                                      <p>Beds: {{ property.beds }} &nbsp; Baths: {{ property.baths }}</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </section>
-
-
-<!-- Related-listings-->
-
-
-
-                                    <!-- <app-all-shortlets></app-all-shortlets> -->
+                                    </section>
                                 </div>
                             </div>
                         </div>
@@ -164,30 +155,31 @@
 
 
                             <!-- <select [(ngModel)]="searchData.purpose" name="purpose" required>
+                              <option value="" disabled>Purpose</option>
                               <option value="shortlet">For Shortlet</option>
                               <option value="sale">For Sale</option>
                               <option value="rent">For Rent</option>
                             </select>
 
                             <select [(ngModel)]="searchData.type" name="type">
-                              <option value="" disabled selected>Type</option>
+                              <option value="" disabled>Type</option>
                               <option value="apartment">Apartment</option>
                               <option value="duplex">Duplex</option>
                               <option value="bungalow">Bungalow</option>
                             </select>
 
                             <select [(ngModel)]="searchData.beds" name="beds">
-                              <option value="" disabled selected>Beds</option>
+                              <option value="" disabled>Beds</option>
                               <option *ngFor="let b of [1,2,3,4,5,6]" [value]="b">{{ b }}</option>
                             </select>
 
                             <select [(ngModel)]="searchData.minPrice" name="minPrice">
-                              <option value="" disabled selected>Min Price</option>
+                              <option value="" disabled>Min Price</option>
                               <option *ngFor="let p of prices" [value]="p">₦{{ p | number }}</option>
                             </select>
 
                             <select [(ngModel)]="searchData.maxPrice" name="maxPrice">
-                              <option value="" disabled selected>Max Price</option>
+                              <option value="" disabled>Max Price</option>
                               <option *ngFor="let p of prices" [value]="p">₦{{ p | number }}</option>
                             </select> -->
 

@@ -32,5 +32,6 @@ searchData: any = {
   searchProperty() {
     console.log('Searching with:', this.searchData); // Optional debug log
     this.properties = this.shortletService.filterShortlets(this.searchData);
+    window.scrollTo({ top: 0 });
   }
 }
