@@ -228,3 +228,129 @@ position: relative;
     transition: transform 0.3s ease;
   }
 }
+
+
+// Base styles
+.shortlet-container
+{
+
+}
+
+.product-img {
+  border-radius: 7px;
+}
+
+.items {
+  border-radius: 7px;
+  display: block;
+  padding: 15px 15px 8px 15px;
+}
+
+
+
+.type {
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: red;
+  list-style: none;
+}
+
+// .product-list-date {
+//   margin-left: 10rem;
+// }
+
+.product-title {
+  font-size: 18px;
+  padding: 0;
+}
+
+.mini-writeup {
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.image-wrapper {
+  position: relative;
+
+  img {
+    width: 16rem;
+    height: 14rem;
+    object-fit: cover;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    background-color: rgba(34, 34, 34, 0.6); // Overlay color
+    z-index: 1;
+  }
+
+  .badges {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    z-index: 2;
+
+    .badge {
+      background: #3f4c6b;
+      color: #fff;
+      font-size: 0.7rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+  }
+}
+
+.product-price {
+  font-size: 22px;
+}
+
+/* Media Queries */
+
+/* For screens smaller than 1024px, reduce image dimensions and adjust text size */
+@media (max-width: 1024px) {
+  .image-wrapper {
+    img {
+      width: 14rem;
+      height: 12rem;
+    }
+  }
+  .product-title {
+    font-size: 18px;
+  }
+  .product-price {
+    font-size: 20px;
+  }
+  .mini-writeup {
+    font-size: 11px;
+  }
+}
+
+/* For screens smaller than 768px, stack the cards and use 100% widths */
+@media (max-width: 768px) {
+  .image-wrapper {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .product-title {
+    font-size: 16px;
+  }
+  .product-price {
+    font-size: 18px;
+  }
+  .mini-writeup {
+    font-size: 10px;
+  }
+}
