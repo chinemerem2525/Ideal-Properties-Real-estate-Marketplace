@@ -9,29 +9,51 @@ import { ShortletService } from 'src/app/shared/service/shortlet/shortlet.servic
   styleUrls: ['./short-stay.component.scss']
 })
 export class ShortStayComponent implements OnInit {
- properties: Shortlet[] = [];
-  prices: number[] = [50000, 100000, 150000, 200000, 250000, 300000];
+ allProperties: Shortlet[] = [];
+  filteredProperties: Shortlet[] = [];
+  displayedProperties: Shortlet[] = [];
 
-searchData: any = {
-  location: '',
-  purpose: '',
-  type: '',
-  beds: '',
-  minPrice: '',
-  maxPrice: ''
-};
+  // Pagination
+  currentPage: number = 1;
+  pageSize: number = 9;    // how many per page
+  totalPages: number = 1;
 
+  prices: number[] = [50000, 100000, 150000, 200000, 250000, 300000, 400000];
 
+  searchData = {
+    location: '',
+    purpose: '',
+    type: '',
+    beds: '',
+    minPrice: '',
+    maxPrice: ''
+  };
 
   constructor(private shortletService: ShortletService) {}
 
   ngOnInit(): void {
-    this.properties = this.shortletService.getShortlets();
+    this.allProperties = this.shortletService.getShortlets();
+    this.filteredProperties = this.allProperties;
+    this.updateDisplayedProperties();
   }
 
   searchProperty() {
-    console.log('Searching with:', this.searchData); // Optional debug log
-    this.properties = this.shortletService.filterShortlets(this.searchData);
-    window.scrollTo({ top: 0 });
+    this.filteredProperties = this.shortletService.filterShortlets(this.searchData);
+    this.currentPage = 1;
+    this.updateDisplayedProperties();
+  }
+
+  updateDisplayedProperties() {
+    this.totalPages = Math.ceil(this.filteredProperties.length / this.pageSize);
+    const start = (this.currentPage - 1) * this.pageSize;
+    const end = start + this.pageSize;
+    this.displayedProperties = this.filteredProperties.slice(start, end);
+  }
+
+  goToPage(page: number) {
+    if (page >= 1 && page <= this.totalPages) {
+      this.currentPage = page;
+      this.updateDisplayedProperties();
+    }
   }
 }
