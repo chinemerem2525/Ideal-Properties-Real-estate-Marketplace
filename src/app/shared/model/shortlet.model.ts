@@ -2,6 +2,7 @@ export interface Shortlet {
   id: string;
   image: string;
   title: string;
+  description: string;
   location: string;
   beds: number;
   baths: number;
@@ -9,5 +10,9 @@ export interface Shortlet {
   badges: string[];
   badge: string;
   price: string;       // We will parse this string to number for filtering
-  priceLabel: string;
+  frequency: string;
+  agentImage: string;
+  agentName: string;
+  agentTitle: string;
+  listedDate: string;
 }
