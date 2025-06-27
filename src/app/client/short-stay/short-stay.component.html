@@ -77,9 +77,10 @@
                                         </div> -->
                                     </div>
                                    <!-- No results -->
-                                    <ng-template #noResults>
-                                      <p>No properties found matching your criteria.</p>
-                                    </ng-template>
+                                   <div *ngIf="filteredProperties.length === 0" class="alert text-center mt-3">
+                                      No property found.
+                                    </div>
+
                                    <!--  -->
                                     <!-- shortlets -->
                                     <section class="shortlet-listings">
