@@ -747,4 +747,5 @@ export class ShortletService {
              (!criteria.maxPrice || priceValue <= +criteria.maxPrice);
     });
   }
+  
 }
