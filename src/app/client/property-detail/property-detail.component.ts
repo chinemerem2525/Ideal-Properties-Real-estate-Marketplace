@@ -1,5 +1,7 @@
+import { TopRatedProduct } from './../../shared/model/topRated.model';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
 
 interface Property {
   id: string;
@@ -22,8 +24,6 @@ interface Property {
     name: string;
     title: string;
     image: string;
-    rating: number;
-    reviewCount: number;
     bio: string;
     social: {
       facebook?: string;
@@ -32,14 +32,6 @@ interface Property {
       youtube?: string;
     };
   };
-  topRatedProducts: {
-    image: string;
-    name: string;
-    url: string;
-    rating: number;
-    price: string;
-    oldPrice?: string;
-  }[];
    contact: {
     phone: string;
     whatsapp: string;
@@ -54,6 +46,7 @@ interface Property {
 export class PropertyDetailComponent implements OnInit {
   propertyId!: string;
   property!: Property | undefined;
+
 
   allProperties: Property[] = [
     {
@@ -102,8 +95,6 @@ export class PropertyDetailComponent implements OnInit {
         name: 'Vanessa E. Hartwell',
         title: 'Senior Realtor',
         image: '../../../assets/img/team/2.jpg',
-        rating: 4.7,
-        reviewCount: 28,
         bio: "I'm an experienced realtor known for her client-first approach and strong negotiation skills in luxury and commercial real estate.",
         social: {
           facebook: 'https://facebook.com/vanessa.hartwell.realtor',
@@ -112,32 +103,6 @@ export class PropertyDetailComponent implements OnInit {
           youtube: 'https://youtube.com/@vanessahartwellrealtor'
         }
       },
-      topRatedProducts: [
-        {
-          image: '../../../assets/img/product/1.png',
-          name: 'Luxury House In Greenville',
-          url: 'product-details.html',
-          rating: 5,
-          price: '₦300,000,000',
-          oldPrice: '₦350,000,000'
-        },
-        {
-          image: '../../../assets/img/product/2.png',
-          name: 'Apartment with Subunits',
-          url: 'product-details.html',
-          rating: 5,
-          price: '₦140,000',
-          oldPrice: '₦155,000'
-        },
-        {
-          image: '../../../assets/img/product/3.png',
-          name: '3 Rooms Manhattan',
-          url: 'product-details.html',
-          rating: 3.5,
-          price: '₦800,000,000',
-          oldPrice: '₦890,000,000'
-        }
-      ],
       contact: {
         phone: '09033246432',
         whatsapp: '2349033246432'
@@ -145,6 +110,33 @@ export class PropertyDetailComponent implements OnInit {
     }
     // More property objects can go here...
   ];
+  topRatedProducts: TopRatedProduct[] = [
+  {
+    image: '../../../assets/img/product/1.png',
+    name: 'Luxury House In Greenville',
+    url: 'product-details.html',
+    rating: 5,
+    price: '₦300,000,000',
+    oldPrice: '₦350,000,000'
+  },
+  {
+    image: '../../../assets/img/product/2.png',
+    name: 'Apartment with Subunits',
+    url: 'product-details.html',
+    rating: 5,
+    price: '₦140,000',
+    oldPrice: '₦155,000'
+  },
+  {
+    image: '../../../assets/img/product/3.png',
+    name: '3 Rooms Manhattan',
+    url: 'product-details.html',
+    rating: 3.5,
+    price: '₦800,000,000',
+    oldPrice: '₦890,000,000'
+  }
+];
+
 
   constructor(private route: ActivatedRoute) {}
 

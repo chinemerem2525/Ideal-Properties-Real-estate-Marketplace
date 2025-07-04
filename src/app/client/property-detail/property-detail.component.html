@@ -162,19 +162,6 @@
                                 <img [src]="property.author.image" alt="Image">
                                 <h5>{{ property.author.name }}</h5>
                                 <small>{{ property.author.title }}</small>
-                                <div class="product-ratting">
-                                  <ul>
-                                    <ng-container *ngFor="let star of [1,2,3,4,5]; let i = index">
-                                      <li>
-                                        <i [class]="
-                                          property.author.rating >= star ? 'fas fa-star' :
-                                          property.author.rating >= star - 0.5 ? 'fas fa-star-half-alt' : 'far fa-star'
-                                        "></i>
-                                      </li>
-                                    </ng-container>
-                                    <li class="review-total"><a href="#"> ({{ property.author.reviewCount }} Reviews)</a></li>
-                                  </ul>
-                                </div>
                                 <p>{{ property.author.bio }}</p>
                                 <div class="ltn__social-media">
                                   <ul>
@@ -199,10 +186,10 @@
                             </div>
 
                             <!-- Top Rated Product Widget -->
-                            <div class="widget ltn__top-rated-product-widget" *ngIf="property.topRatedProducts?.length">
+                            <div class="widget ltn__top-rated-product-widget" *ngIf="topRatedProducts?.length">
                               <h4 class="ltn__widget-title ltn__widget-title-border-2">Top Rated Product</h4>
                               <ul>
-                                <li *ngFor="let product of property.topRatedProducts">
+                                <li *ngFor="let product of topRatedProducts">
                                   <div class="top-rated-product-item clearfix">
                                     <div class="top-rated-product-img">
                                       <a [href]="product.url"><img [src]="product.image" alt="#"></a>
@@ -337,19 +324,6 @@
                         <img [src]="property.author.image" alt="Image">
                         <h5>{{ property.author.name }}</h5>
                         <small>{{ property.author.title }}</small>
-                        <div class="product-ratting">
-                          <ul>
-                            <ng-container *ngFor="let star of [1,2,3,4,5]; let i = index">
-                              <li>
-                                <i [class]="
-                                  property.author.rating >= star ? 'fas fa-star' :
-                                  property.author.rating >= star - 0.5 ? 'fas fa-star-half-alt' : 'far fa-star'
-                                "></i>
-                              </li>
-                            </ng-container>
-                            <li class="review-total"><a href="#"> ({{ property.author.reviewCount }} Reviews)</a></li>
-                          </ul>
-                        </div>
                         <p>{{ property.author.bio }}</p>
                         <div class="ltn__social-media">
                           <ul>
@@ -374,10 +348,10 @@
                     </div>
 
                     <!-- Top Rated Property Widget -->
-                    <div class="widget ltn__top-rated-product-widget" *ngIf="property.topRatedProducts?.length">
+                    <div class="widget ltn__top-rated-product-widget" *ngIf="topRatedProducts?.length">
                       <h4 class="ltn__widget-title ltn__widget-title-border-2">Top Rated Property</h4>
                       <ul>
-                        <li *ngFor="let product of property.topRatedProducts">
+                        <li *ngFor="let product of topRatedProducts">
                           <div class="top-rated-product-item clearfix">
                             <div class="top-rated-product-img">
                               <a [href]="product.url"><img [src]="product.image" alt="#"></a>
