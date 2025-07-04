@@ -102,7 +102,7 @@
                                             </div>
                                             <div class="property-details">
                                               <span class="type" [class.red-text]="property.type === 'Terraced'">{{ property.type }}</span>
-                                              <a [routerLink]="['/listings/property-details', property.id]">
+                                              <a [routerLink]="['/listings/property-details']" [queryParams]="{title: property.title, id: property.id }">
                                                 <h3>{{ property.title }}</h3>
                                               </a>
                                               <p class="location"><i class="flaticon-pin"></i> {{ property.location }}</p>

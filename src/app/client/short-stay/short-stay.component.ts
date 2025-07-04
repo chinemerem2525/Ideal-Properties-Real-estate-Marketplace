@@ -1,8 +1,11 @@
+import { Property } from './../../shared/model/property.model';
 import { SearchCriteria } from './../../shared/model/shotletSearchCriteria.model';
 import { Shortlet } from './../../shared/model/shortlet.model';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ShortletService } from 'src/app/shared/service/shortlet/shortlet.service.ts.service';
+import { PropertyDetailService } from 'src/app/shared/service/propertyDetail/property-detail.service';
+
 
 @Component({
   selector: 'app-short-stay',
@@ -13,6 +16,8 @@ export class ShortStayComponent implements OnInit {
   allProperties: Shortlet[] = [];
   filteredProperties: Shortlet[] = [];
   displayedProperties: Shortlet[] = [];
+
+    property!: Property | undefined; // ADD THIS
 
   // Pagination
   currentPage: number = 1;
@@ -30,7 +35,7 @@ export class ShortStayComponent implements OnInit {
     maxPrice: ''
   };
 
-  constructor(private shortletService: ShortletService,   private router: Router, private route: ActivatedRoute) {}
+  constructor(private shortletService: ShortletService,   private router: Router, private route: ActivatedRoute, private ps: PropertyDetailService) {}
 
   ngOnInit(): void {
     // this.allProperties = this.shortletService.getShortlets();
@@ -52,7 +57,19 @@ export class ShortStayComponent implements OnInit {
     this.currentPage = 1;
     this.updateDisplayedProperties();
   });
+
+this.route.paramMap.subscribe(params => {
+  const id = params.get('id') || '';
+  const title = params.get('title') || '';
+  this.property = this.ps.getPropertyByIdAndTitle(id, title);
+});
+
   }
+
+
+
+
+
 
   searchProperty() {
     // this.filteredProperties = this.shortletService.filterShortlets(this.searchData);

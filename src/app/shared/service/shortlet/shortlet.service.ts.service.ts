@@ -9,7 +9,7 @@ export class ShortletService {
    {
     id: 'IP56729',
     image: '../../assets/img/gallery/10.jpg',
-    title: 'Stylish 2-Bedroom Apartment',
+    title: 'Luxury 3 Bedroom Maisonette with BQ',
     description: 'Stylish 2-Bedroom Apartment / Flat Apartment for shortlet',
     location: 'Lekki phase 1',
     beds: 3,
@@ -747,5 +747,5 @@ export class ShortletService {
              (!criteria.maxPrice || priceValue <= +criteria.maxPrice);
     });
   }
-  
+
 }

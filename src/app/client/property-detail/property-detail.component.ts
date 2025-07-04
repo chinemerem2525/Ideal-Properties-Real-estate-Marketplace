@@ -46,21 +46,28 @@ export class PropertyDetailComponent implements OnInit {
     private propertyService: PropertyDetailService
   ) {}
 
-  ngOnInit(): void {
-    const allProperties = this.propertyService.getAllProperties();
-    this.route.paramMap.subscribe(params => {
-      this.propertyId = params.get('id') || '';
-      this.property = allProperties.find(p => p.id === this.propertyId);
-    });
+ngOnInit(): void {
+  this.route.queryParamMap.subscribe(params => {
+    const id = params.get('id') || '';
+    const title = params.get('title') || '';
 
-    this.setupTabs();
+    this.property = this.propertyService.getPropertyByIdAndTitle(id, title);
 
-    const script = document.createElement('script');
-    script.src = '../../../assets/js/main.js';
-    document.body.appendChild(script);
+    if (!this.property) {
+      // optionally handle “not found”
+      console.warn('Property not found for the given ID and Title.');
+    }
+  });
 
-    window.scrollTo({ top: 0 });
-  }
+  this.setupTabs();
+
+  const script = document.createElement('script');
+  script.src = '../../../assets/js/main.js';
+  document.body.appendChild(script);
+
+  window.scrollTo({ top: 0 });
+}
+
 
   setupTabs(): void {
     const buttons = document.querySelectorAll<HTMLButtonElement>('.tab-btn');

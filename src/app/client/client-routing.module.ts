@@ -45,9 +45,11 @@ const routes: Routes = [
         component: ContactUsComponent
       },
       {
-        path: 'listings/property-details/:id',
+        path: 'listings/property-details',
         component: PropertyDetailComponent
       }
+
+
     ]
   }
 ];

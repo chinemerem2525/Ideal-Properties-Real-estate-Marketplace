@@ -1,73 +1,71 @@
-import { Property } from './../../model/property.model';
 import { Injectable } from '@angular/core';
-
+import { Property } from './../../model/property.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PropertyDetailService {
   private allPropertie: Property[] = [
-
-  {
-    id: 'IP56729',
-    title: 'Luxury 3 Bedroom Maisonette with BQ',
-    location: 'Ikoyi, Lagos',
-    isFeatured: false,
-    images: [
-      '../../../assets/img/img-slide/31.jpg',
-      '../../../assets/img/img-slide/32.jpg',
-      '../../../assets/img/img-slide/33.jpg',
-      '../../../assets/img/img-slide/34.jpg',
-      '../../../assets/img/img-slide/35.jpg'
-    ],
-    descriptions: [
-      'Experience ultimate comfort and breathtaking waterfront views in this elegant 4-bedroom duplex, available for daily rent. Perfect for vacations, business stays, or private getaways, this home features spacious en-suite bedrooms, a fully equipped kitchen, and stylish living areas designed for relaxation.',
-      'The modern kitchen with central island leads to a unique breakfast family room with glass walls and access to a separate utility room.'
-    ],
-    price: '₦800,000,000',
-    rooms: 7,
-    baths: 2,
-    area: '120 sqft',
-    beds: 7,
-    yearBuilt: 2025,
-    status: 'For Sale',
-    features: [
-      { icon: 'flaticon-double-bed', title: 'Living Room', size: '20 x 16 sq feet' },
-      { icon: 'flaticon-double-bed', title: 'Garage', size: '20 x 16 sq feet' },
-      { icon: 'flaticon-double-bed', title: 'Dining Area', size: '20 x 16 sq feet' },
-      { icon: 'flaticon-double-bed', title: 'Bedroom', size: '20 x 16 sq feet' },
-      { icon: 'flaticon-double-bed', title: 'Bathroom', size: '20 x 16 sq feet' },
-      { icon: 'flaticon-double-bed', title: 'Gym Area', size: '20 x 16 sq feet' },
-      { icon: 'flaticon-double-bed', title: 'Garden', size: '20 x 16 sq feet' },
-      { icon: 'flaticon-double-bed', title: 'Parking', size: '20 x 16 sq feet' }
-    ],
-    amenities: [
-      'Air Conditioning', 'Gym', 'Microwave', 'Swimming Pool', 'WiFi',
-      'Barbeque', 'Recreation', 'Basketball Court', 'Fireplace',
-      'Refrigerator', 'Window Coverings', 'Washer', '24x7 Security', 'Indoor Game'
-    ],
-    video: {
-      url: 'https://www.youtube.com/embed/eWUxqVFBq74?autoplay=1&showinfo=0',
-      thumbnail: '../../../assets/img/others/5.jpg'
-    },
-    author: {
-      name: 'Vanessa E. Hartwell',
-      title: 'Senior Realtor',
-      image: '../../../assets/img/team/2.jpg',
-      bio: "I'm an experienced realtor known for my client-first approach and strong negotiation skills in luxury and commercial real estate.",
-      social: {
-        facebook: 'https://facebook.com/vanessa.hartwell.realtor',
-        twitter: 'https://twitter.com/vanessa_hartwell',
-        linkedin: 'https://linkedin.com/in/vanessahartwell',
-        youtube: 'https://youtube.com/@vanessahartwellrealtor'
+    {
+      id: 'IP56729',
+      title: 'Luxury 3 Bedroom Maisonette with BQ',
+      location: 'Ikoyi, Lagos',
+      isFeatured: false,
+      images: [
+        '../../../assets/img/img-slide/31.jpg',
+        '../../../assets/img/img-slide/32.jpg',
+        '../../../assets/img/img-slide/33.jpg',
+        '../../../assets/img/img-slide/34.jpg',
+        '../../../assets/img/img-slide/35.jpg'
+      ],
+      descriptions: [
+        'Experience ultimate comfort and breathtaking waterfront views in this elegant 4-bedroom duplex, available for daily rent. Perfect for vacations, business stays, or private getaways, this home features spacious en-suite bedrooms, a fully equipped kitchen, and stylish living areas designed for relaxation.',
+        'The modern kitchen with central island leads to a unique breakfast family room with glass walls and access to a separate utility room.'
+      ],
+      price: '₦800,000,000',
+      rooms: 7,
+      baths: 2,
+      area: '120 sqft',
+      beds: 7,
+      yearBuilt: 2025,
+      status: 'For Sale',
+      features: [
+        { icon: 'flaticon-double-bed', title: 'Living Room', size: '20 x 16 sq feet' },
+        { icon: 'flaticon-double-bed', title: 'Garage', size: '20 x 16 sq feet' },
+        { icon: 'flaticon-double-bed', title: 'Dining Area', size: '20 x 16 sq feet' },
+        { icon: 'flaticon-double-bed', title: 'Bedroom', size: '20 x 16 sq feet' },
+        { icon: 'flaticon-double-bed', title: 'Bathroom', size: '20 x 16 sq feet' },
+        { icon: 'flaticon-double-bed', title: 'Gym Area', size: '20 x 16 sq feet' },
+        { icon: 'flaticon-double-bed', title: 'Garden', size: '20 x 16 sq feet' },
+        { icon: 'flaticon-double-bed', title: 'Parking', size: '20 x 16 sq feet' }
+      ],
+      amenities: [
+        'Air Conditioning', 'Gym', 'Microwave', 'Swimming Pool', 'WiFi',
+        'Barbeque', 'Recreation', 'Basketball Court', 'Fireplace',
+        'Refrigerator', 'Window Coverings', 'Washer', '24x7 Security', 'Indoor Game'
+      ],
+      video: {
+        url: 'https://www.youtube.com/embed/eWUxqVFBq74?autoplay=1&showinfo=0',
+        thumbnail: '../../../assets/img/others/5.jpg'
+      },
+      author: {
+        name: 'Vanessa E. Hartwell',
+        title: 'Senior Realtor',
+        image: '../../../assets/img/team/2.jpg',
+        bio: "I'm an experienced realtor known for my client-first approach and strong negotiation skills in luxury and commercial real estate.",
+        social: {
+          facebook: 'https://facebook.com/vanessa.hartwell.realtor',
+          twitter: 'https://twitter.com/vanessa_hartwell',
+          linkedin: 'https://linkedin.com/in/vanessahartwell',
+          youtube: 'https://youtube.com/@vanessahartwellrealtor'
+        }
+      },
+      contact: {
+        phone: '09033246432',
+        whatsapp: '2349033246432'
       }
     },
-    contact: {
-      phone: '09033246432',
-      whatsapp: '2349033246432'
-    }
-  },
-  {
+      {
     id: 'IP56730',
     title: 'Premium 4 Bedroom Duplex with Sea View',
     location: 'Banana Island, Lagos',
@@ -541,10 +539,20 @@ export class PropertyDetailService {
   }
     // More property objects can go here...
   ];
-  constructor() { }
 
-     getAllProperties(): Property[] {
-      return this.allPropertie;
-    }
+  constructor() {}
 
+  getAllProperties(): Property[] {
+    return this.allPropertie;
+  }
+
+  /**
+   * Get a single property by matching BOTH id and title
+   */
+  getPropertyByIdAndTitle(id: string, title: string): Property | undefined {
+    return this.allPropertie.find(
+      p => p.id === id && p.title.toLowerCase() === title.toLowerCase()
+    );
+  }
 }
+
