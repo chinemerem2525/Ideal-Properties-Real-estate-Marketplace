@@ -19,5 +19,324 @@
     </div>
     <!-- BREADCRUMB AREA END -->
 
+            <!-- PRODUCT DETAILS AREA START -->
+    <div class="ltn__product-area ltn__product-gutter">
+        <div class="content-container">
+            <div class="row">
+                <div class="col-lg-8 order-lg-2 mb-100">
+                    <div class="ltn__shop-options">
+                        <ul class="justify-content-start">
+                            <li>
+                                <div class="ltn__grid-list-tab-menu ">
+                                    <div class="nav">
+                                        <a class="active show" data-bs-toggle="tab" href="#liton_product_grid"><i class="fas fa-th-large"></i></a>
+                                        <a data-bs-toggle="tab" href="#liton_product_list"><i class="fas fa-list"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="d-none">
+                               <div class="showing-product-number text-right">
+                                    <span>Showing 1–12 of 18 results</span>
+                                </div>
+                            </li>
+                            <li>
+                               <div class="short-by text-center">
+                                    <select class="nice-select">
+                                        <option>Default Sorting</option>
+                                        <option>Sort by popularity</option>
+                                        <option>Sort by new arrivals</option>
+                                        <option>Sort by price: low to high</option>
+                                        <option>Sort by price: high to low</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                               <div class="short-by text-center">
+                                    <select class="nice-select">
+                                        <option>Per Page: 12</option>
+                                        <option>Per Page: 20</option>
+                                        <option>Per Page: 30</option>
+                                        <option>Per Page: 50</option>
+                                        <option>Per Page: 100</option>
+                                    </select>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="liton_product_grid">
+                            <div class="ltn__product-tab-content-inner ltn__product-grid-view">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <!-- Search Widget -->
+                                        <!-- <div class="ltn__search-widget mb-30">
+                                            <form action="#">
+                                                <input type="text" name="search" placeholder="Search your keyword...">
+                                                <button type="submit"><i class="fas fa-search"></i></button>
+                                            </form>
+                                        </div> -->
+                                    </div>
+                                   <!-- No results -->
+                                   <div *ngIf="testProperties.length === 0" class="alert text-center mt-3">
+                                     Sorry we could not find any property matching your criteria.
+                                    </div>
+
+                                   <!--  -->
+                                    <!-- shortlets -->
+                                    <section class="shortlet-listings">
+                                      <div class="container">
+                                        <div class="carousel-wrapper carousel">
+                                          <div class="property-card property-item" *ngFor="let property of testProperties">
+                                            <div class="image-wrapper">
+
+                                              <img [src]="property.mainImage" alt="Property image">
+
+                                              <div class="badges">
+                                                <span class="badge" *ngFor="let badge of property.badge">{{ badge }}</span>
+                                              </div>
+                                              <div class="price">₦{{ property.price }}</div>
+                                              <div class="icons">
+                                                <button class="icon"><i class="fa fa-heart"></i></button>
+                                                <button class="icon"><i class="fa fa-retweet"></i></button>
+                                              </div>
+                                            </div>
+                                            <div class="property-details">
+                                              <span class="type" [class.red-text]="property.type === 'Terraced'">{{ property.type }}</span>
+                                              <a [routerLink]="['/listings/property-details']" [queryParams]="{title: property.title, id: property.id }">
+                                                <h3>{{ property.title }}</h3>
+                                              </a>
+                                              <p class="location"><i class="flaticon-pin"></i> {{ property.location }}</p>
+                                              <p>Beds: {{ property.beds }} &nbsp; Baths: {{ property.baths }}</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="liton_product_list">
+                            <div class="ltn__product-tab-content-inner ltn__product-list-view">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <!-- Search Widget -->
+                                        <!-- <div class="ltn__search-widget mb-30">
+                                            <form action="#">
+                                                <input type="text" name="search" placeholder="Search your keyword...">
+                                                <button type="submit"><i class="fas fa-search"></i></button>
+                                            </form>
+                                        </div> -->
+                                    </div>
+                                 <!-- Single shortlets -->
+                                  <div class="col-lg-12 shortlet-container" *ngFor="let listing of displayedProperties">
+                                    <div class="ltn__product-item ltn__product-item-4 ltn__product-item-5 items">
+                                      <div class="product-img image-wrapper">
+                                        <a [routerLink]="['/listings/property-details', listing.id]">
+                                          <img [src]="listing.mainImage" alt="Property Image">
+                                        </a>
+                                        <div class="badges">
+                                          <span class="badge">{{ listing.badge }}</span>
+                                        </div>
+                                      </div>
+                                      <div class="product-details">
+                                      <div class="product-info">
+                                        <div class="product-badge-price">
+                                          <span class="type">{{ listing.type }}</span>
+                                          <div class="product-price">
+                                            <span>{{ listing.price }}</span>
+                                          </div>
+                                        </div>
+                                        <h2 class="product-title">
+                                          <a [routerLink]="['/property', listing.id]">{{ listing.title }}</a>
+                                        </h2>
+                                        <p class="mini-writeup">{{ listing.descriptions }}</p>
+                                        <ul class="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
+                                          <li><span>{{ listing.beds }}</span> Bed</li>
+                                          <li><span>{{ listing.baths }}</span> Bath</li>
+                                        </ul>
+                                        <div class="product-img-location">
+                                          <ul>
+                                            <li>
+                                              <a href="locations.html"><i class="flaticon-pin"></i> {{ listing.location }}</a>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                      <div class="product-info-bottom">
+                                        <div class="real-estate-agent">
+                                          <div class="agent-img">
+                                            <a href="team-details.html">
+                                              <img [src]="listing.author.image" alt="Agent Image">
+                                            </a>
+                                          </div>
+                                          <div class="agent-brief">
+                                            <h6><a href="team-details.html">{{ listing.author.name }}</a></h6>
+                                            <small>{{ listing.author.title }}</small>
+                                          </div>
+                                        </div>
+                                        <div class="product-hover-action">
+                                          <small>Listed: {{ listing.listedDate }}</small>
+                                        </div>
+                                      </div>
+                                      </div>
+
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ltn__pagination-area text-center" *ngIf="totalPages > 1">
+                      <div class="ltn__pagination">
+                        <ul>
+                          <li>
+                            <a (click)="goToPage(currentPage - 1)">
+                              <i class="fas fa-angle-double-left"></i>
+                            </a>
+                          </li>
+                          <li *ngFor="let page of [].constructor(totalPages); let i = index">
+                            <a (click)="goToPage(i+1)" [class.active]="currentPage === i+1">{{ i + 1 }}</a>
+                          </li>
+                          <li>
+                            <a (click)="goToPage(currentPage + 1)">
+                              <i class="fas fa-angle-double-right"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-4  mb-100">
+                    <aside class="sidebar ltn__shop-sidebar">
+                        <h3 class="mb-10">Advance Information</h3>
+                        <label class="mb-30"><small>About 9,620 results (0.62 seconds) </small></label>
+                        <!-- Advance Information widget -->
+                        <div class="search-container">
+                          <form (ngSubmit)="searchProperty()" #searchForm="ngForm">
+                            <input type="text" [(ngModel)]="searchData.location" name="location" placeholder="Enter Location" required />
+                             <input type="text" placeholder="Type(Apartment, Flat, Self Con)" [(ngModel)]="searchData.type" name="type" />
+                             <input type="text" placeholder="Purpose(Rent, Sale, Shortlet)" [(ngModel)]="searchData.purpose" name="purpose" required />
+                            <input placeholder="Beds" type="number" [(ngModel)]="searchData.beds" name="beds" />
+                             <input placeholder="Min Price" type="number" [(ngModel)]="searchData.minPrice" name="minPrice" />
+                             <input placeholder="Max Price" type="number" [(ngModel)]="searchData.maxPrice" name="maxPrice" />
+
+
+                            <!-- <select [(ngModel)]="searchData.purpose" name="purpose" required>
+                              <option value="" disabled>Purpose</option>
+                              <option value="shortlet">For Shortlet</option>
+                              <option value="sale">For Sale</option>
+                              <option value="rent">For Rent</option>
+                            </select>
+
+                            <select [(ngModel)]="searchData.type" name="type">
+                              <option value="" disabled>Type</option>
+                              <option value="apartment">Apartment</option>
+                              <option value="duplex">Duplex</option>
+                              <option value="bungalow">Bungalow</option>
+                            </select>
+
+                            <select [(ngModel)]="searchData.beds" name="beds">
+                              <option value="" >Beds</option>
+                              <option *ngFor="let b of [1,2,3,4,5,6]" [value]="b">{{ b }}</option>
+                            </select>
+
+                            <select [(ngModel)]="searchData.minPrice" name="minPrice">
+                              <option value="" disabled>Min Price</option>
+                              <option *ngFor="let p of prices" [value]="p">₦{{ p | number }}</option>
+                            </select>
+
+                            <select [(ngModel)]="searchData.maxPrice" name="maxPrice">
+                              <option value="" disabled>Max Price</option>
+                              <option *ngFor="let p of prices" [value]="p">₦{{ p | number }}</option>
+                            </select> -->
+
+                            <button type="submit">SEARCH</button>
+                          </form> <br><br>
+
+  <!-- Top Rated Properties Widget -->
+                        <h4 class="ltn__widget-title ltn__widget-title-border">Top Rated Product</h4>
+                        <ul>
+                            <li>
+                                <div class="top-rated-product-item clearfix">
+                                    <div class="top-rated-product-img">
+                                        <a href="product-details.html"><img src="../../../assets/img/product/1.png" alt="#"></a>
+                                    </div>
+                                    <div class="top-rated-product-info">
+                                        <div class="product-ratting">
+                                            <ul>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <h6><a href="product-details.html">Mixel Solid Seat Cover</a></h6>
+                                        <div class="product-price">
+                                            <span>$49.00</span>
+                                            <del>$65.00</del>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="top-rated-product-item clearfix">
+                                    <div class="top-rated-product-img">
+                                        <a href="product-details.html"><img src="../../../assets/img/product/2.png" alt="#"></a>
+                                    </div>
+                                    <div class="top-rated-product-info">
+                                        <div class="product-ratting">
+                                            <ul>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <h6><a href="product-details.html">3 Rooms Manhattan</a></h6>
+                                        <div class="product-price">
+                                            <span>$49.00</span>
+                                            <del>$65.00</del>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="top-rated-product-item clearfix">
+                                    <div class="top-rated-product-img">
+                                        <a href="product-details.html"><img src="../../../assets/img/product/3.png" alt="#"></a>
+                                    </div>
+                                    <div class="top-rated-product-info">
+                                        <div class="product-ratting">
+                                            <ul>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                                <li><a href="#"><i class="far fa-star"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <h6><a href="product-details.html">Coil Spring Conversion</a></h6>
+                                        <div class="product-price">
+                                            <span>$49.00</span>
+                                            <del>$65.00</del>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+
+                        </div>
+
+
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- PRODUCT DETAILS AREA END -->
 </div>
 

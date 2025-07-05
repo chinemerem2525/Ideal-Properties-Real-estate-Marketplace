@@ -114,7 +114,6 @@ export class ShortletService {
     agentTitle: 'Owner',
     listedDate: '05-11-2025'
   },
-
   {
     id: 'IP56735',
     image: '../../assets/img/product/3.png',

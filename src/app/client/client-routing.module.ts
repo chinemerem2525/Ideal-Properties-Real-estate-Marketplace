@@ -47,9 +47,11 @@ const routes: Routes = [
       {
         path: 'listings/property-details',
         component: PropertyDetailComponent
+      },
+      {
+        path: 'property/:id',
+        component: PropertyDetailComponent
       }
-
-
     ]
   }
 ];
